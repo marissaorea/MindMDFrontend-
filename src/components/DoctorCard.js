@@ -1,11 +1,12 @@
 import React from 'react'
 
 
-const DoctorCard = () => {
+const DoctorCard = (props) => {
 
+  console.log(props)
   return(
     <div>
-      
+
     </div>
   )
 

@@ -5,9 +5,9 @@ const DoctorList = (props) => {
 
   console.log(props)
 
-
   return(
-    <div>
+    <div className="row">
+      {props.docData.map((doctorInfo) => <DoctorCard key={doctorInfo.uid} doctorInfo={doctorInfo}/>)}
     </div>
   )
 }
