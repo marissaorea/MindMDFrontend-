@@ -2,10 +2,9 @@ import React from "react";
 import DoctorList from "../containers/DoctorList";
 import DoctorSearch from "../containers/DoctorSearch";
 import GoogleMap from "../containers/GoogleMap";
-import 'semantic-ui-css/semantic.min.css';
+import "semantic-ui-css/semantic.min.css";
 
 import "../DoctorPage.css";
-
 
 class DoctorPage extends React.Component {
   state = {
@@ -40,9 +39,14 @@ class DoctorPage extends React.Component {
 
   render() {
     console.log("filter search", this.filterSearchCity());
-    return (
+    return(
       <div>
-        <DoctorSearch handleChange={this.handleChange} />
+        <div className="ui segment">
+          <h2>Mind M.D</h2>
+          <div>
+            <DoctorSearch handleChange={this.handleChange} />
+          </div>
+        </div>
         <div className=" ui grid">
           <div className="ten wide column">
             <DoctorList docData={this.filterSearchCity()} />

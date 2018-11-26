@@ -1,7 +1,6 @@
 import React from "react";
 
-const DoctorCard = props => {
-
+const DoctorCard = (props) => {
   return (
     <div className="ui unstackable items">
       <div className="item">
@@ -31,12 +30,12 @@ const DoctorCard = props => {
             </address>
           </div>
           <div className="extra">{props.doctorInfo.bio}</div>
+          <hr />
+          <br />
         </div>
       </div>
     </div>
-
   );
 };
-
 
 export default DoctorCard;

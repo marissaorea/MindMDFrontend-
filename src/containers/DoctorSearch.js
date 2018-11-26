@@ -3,7 +3,6 @@ import "../DoctorSearch.css";
 
 const DoctorSearch = (props) => {
 
-
   return (
     <section className="search-bar-container">
       <div className="ui huge fluid icon input">
@@ -14,6 +13,7 @@ const DoctorSearch = (props) => {
         />
         <i className="circular search link icon" />
       </div>
+
     </section>
   );
 };
