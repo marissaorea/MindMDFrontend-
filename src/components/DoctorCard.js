@@ -2,24 +2,32 @@ import React from "react";
 
 const DoctorCard = props => {
   console.log(props);
-  // debugger
+
+
   return (
-    <div class="ui unstackable items">
-  <div class="item">
-    <div class="image">
+    <div className="ui unstackable items">
+  <div className="item">
+    <div className="image">
       <img src="DocAvatar.png"/>
     </div>
-    <div class="content">
+    <div className="content">
       <br />
-      <a id="main-header" class="header">Header</a>
-      <div class="meta">
-        <span>Description</span>
+      <a id="main-header" className="header">Dr. {props.doctorInfo.first_name} <br /></a>
+      <a id="main-header" className="header">{props.doctorInfo.last_name}</a>
+      <div className="meta">
+        <span>{props.doctorInfo.title}</span>
       </div>
-      <div class="description">
-        <p></p>
+      <div className="description">
+      <p>Clinic: {props.doctorInfo.office_name}</p>
+      <address>
+        {props.doctorInfo.street}<br/>
+        <span>{props.doctorInfo.city}, </span>
+        {props.doctorInfo.street}<br/>
+        {props.doctorInfo.zip}
+      </address>
       </div>
-      <div class="extra">
-        Additional Details
+      <div className="extra">
+        {props.doctorInfo.bio}
       </div>
     </div>
   </div>

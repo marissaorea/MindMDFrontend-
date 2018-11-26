@@ -3,7 +3,7 @@ import React from 'react'
 const DoctorSearch = () => {
 
 return(
-  <div class="search-bar">
+  <div>
       <h1>Search Bar Under Construction</h1>
       <br />
       <br />

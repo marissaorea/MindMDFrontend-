@@ -6,11 +6,11 @@ class DoctorList extends React.Component {
 
 
   render() {
-    console.log(this.docProfile())
+    console.log(this.props)
     return(
       <div>
         {this.props.docData.map(doctorInfo => (
-          <DoctorCard key={doctorInfo.uid} doctorInfo={doctorInfo} />
+          <DoctorCard key={doctorInfo.id} doctorInfo={doctorInfo} />
         ))}
       </div>
     );
