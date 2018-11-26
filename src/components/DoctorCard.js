@@ -7,7 +7,7 @@ const DoctorCard = props => {
     <div className="ui unstackable items">
       <div className="item">
         <div className="image">
-          <img src="DocAvatar.png" />
+          <img alt="oh no!" src="DocAvatar.png" />
         </div>
         <div className="content">
           <br />
