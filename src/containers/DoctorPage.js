@@ -1,10 +1,17 @@
 import React from "react";
 import DoctorList from "../containers/DoctorList";
 import DoctorSearch from "../containers/DoctorSearch";
+import GoogleMap from "../containers/GoogleMap";
+import 'semantic-ui-css/semantic.min.css';
+
+import "../DoctorPage.css";
+
 
 class DoctorPage extends React.Component {
   state = {
-    docData: []
+    docData: [],
+    searchTerm: "",
+    clicked: false
   };
 
   componentDidMount() {
@@ -17,17 +24,36 @@ class DoctorPage extends React.Component {
       });
   }
 
+  handleChange = event => {
+    let searchTerm = event.target.value;
+    this.setState({ searchTerm });
+  };
 
+  filterSearchCity() {
+    let results = this.state.docData.filter(docInfo => {
+      return docInfo.city
+        .toLowerCase()
+        .includes(this.state.searchTerm.toLowerCase());
+    });
+    return results;
+  }
 
   render() {
+    console.log("filter search", this.filterSearchCity());
     return (
       <div>
-        <DoctorSearch />
-        <div>
-          <DoctorList docData={this.state.docData} />
+        <DoctorSearch handleChange={this.handleChange} />
+        <div className=" ui grid">
+          <div className="ten wide column">
+            <DoctorList docData={this.filterSearchCity()} />
+          </div>
+          <div className="six wide column">
+            <GoogleMap />
+          </div>
         </div>
       </div>
     );
   }
 }
+
 export default DoctorPage;

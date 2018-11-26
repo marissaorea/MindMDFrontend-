@@ -1,0 +1,10 @@
+.search-bar-container{
+  margin-top: 80px;
+  margin-bottom: 70px;
+  position: relative;
+  background-color: #d5f4e6;
+}
+
+.content {
+  border-style: solid;
+}

@@ -1,7 +1,6 @@
 import React from "react";
 
 const DoctorCard = props => {
-  console.log(props);
 
   return (
     <div className="ui unstackable items">
@@ -35,6 +34,7 @@ const DoctorCard = props => {
         </div>
       </div>
     </div>
+
   );
 };
 

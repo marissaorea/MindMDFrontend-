@@ -1,17 +1,21 @@
-import React from 'react'
+import React from "react";
+import "../DoctorSearch.css";
 
-const DoctorSearch = () => {
+const DoctorSearch = (props) => {
 
-return(
-  <div>
-      <h1>Search Bar Under Construction</h1>
-      <br />
-      <br />
-      <br />
-      <br />
-  </div>
-)
 
-}
+  return (
+    <section className="search-bar-container">
+      <div className="ui huge fluid icon input">
+        <input
+          type="text"
+          placeholder={"Search by city"}
+          onChange={props.handleChange}
+        />
+        <i className="circular search link icon" />
+      </div>
+    </section>
+  );
+};
 
 export default DoctorSearch;
