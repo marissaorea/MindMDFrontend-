@@ -6,10 +6,7 @@ class GoogleMap extends React.Component {
     console.log(this.props);
     return (
       <div>
-        <div>
-          <h1>Message from GoogleMap Component</h1>
-        </div>
-        <Map google={this.props.google} zoom={14}>
+        <Map google={this.props.google} zoom={16}>
           <Marker onClick={this.onMarkerClick} name={"Current location"} />
 
           <InfoWindow onClose={this.onInfoWindowClose}>
