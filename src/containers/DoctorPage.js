@@ -35,7 +35,7 @@ class DoctorPage extends React.Component {
         .includes(this.state.searchTerm.toLowerCase());
     });
     return results;
-  }
+  }//filter function
 
   render() {
     return(
