@@ -1,8 +1,9 @@
 import React from 'react'
-import "../GoogleMap.css";
+// import "../GoogleMap.css";
 
-const GoogleMap = () => {
+const GoogleMap = (props) => {
 
+  console.log(props)
   return(
     <div>
       <h1>Message from GoogleMap Component</h1>

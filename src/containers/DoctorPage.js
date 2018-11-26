@@ -38,7 +38,6 @@ class DoctorPage extends React.Component {
   }
 
   render() {
-    console.log("filter search", this.filterSearchCity());
     return(
       <div>
         <div className="ui segment">
@@ -52,7 +51,7 @@ class DoctorPage extends React.Component {
             <DoctorList docData={this.filterSearchCity()} />
           </div>
           <div className="six wide column">
-            <GoogleMap />
+            <GoogleMap docLocation={this.filterSearchCity()} />
           </div>
         </div>
       </div>
