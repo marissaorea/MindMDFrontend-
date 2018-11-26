@@ -3,8 +3,12 @@ import React from 'react'
 const DoctorSearch = () => {
 
 return(
-  <div>
-    <h1>Message from DoctorSearch Component</h1>
+  <div class="search-bar">
+      <h1>Search Bar Under Construction</h1>
+      <br />
+      <br />
+      <br />
+      <br />
   </div>
 )
 

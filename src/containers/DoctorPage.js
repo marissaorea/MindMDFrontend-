@@ -1,5 +1,6 @@
 import React from "react";
 import DoctorList from "../containers/DoctorList";
+import DoctorSearch from "../containers/DoctorSearch";
 
 class DoctorPage extends React.Component {
   state = {
@@ -17,12 +18,13 @@ class DoctorPage extends React.Component {
       });
   }
 
-  render() {
-    // console.log(this.state);
 
+
+  render() {
+    console.log(this.state);
     return (
       <div>
-        <h1>Doctor's Page</h1>
+        <DoctorSearch />
         <div>
           <DoctorList docData={this.state.docData} />
         </div>

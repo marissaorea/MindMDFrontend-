@@ -1,15 +1,21 @@
-import React from 'react'
-import DoctorCard from '../components/DoctorCard'
+import React from "react";
+import DoctorCard from "../components/DoctorCard";
 
-const DoctorList = (props) => {
 
-  console.log(props)
+class DoctorList extends React.Component {
 
-  return(
-    <div className="row">
-      {props.docData.map((doctorInfo) => <DoctorCard key={doctorInfo.uid} doctorInfo={doctorInfo}/>)}
-    </div>
-  )
-}
+
+  render() {
+    console.log(this.docProfile())
+    return(
+      <div>
+        {this.props.docData.map(doctorInfo => (
+          <DoctorCard key={doctorInfo.uid} doctorInfo={doctorInfo} />
+        ))}
+      </div>
+    );
+  }
+
+} //end of class
 
 export default DoctorList;
