@@ -8,8 +8,8 @@ const NavBar = () => {
 
   return(
     <div className="nav-bar">
-      <NavLink style={{ marginRight: '20px' }} to="/"> Home</NavLink>
-      <NavLink style={{ marginRight: '20px' }} to="/doctors">List of Doctors</NavLink>
+      <NavLink className="home-link" style={{ marginRight: '20px', color: '#231C3A'}} to="/"> Home</NavLink>
+      <NavLink className="doctors-link" style={{ marginRight: '20px', color: '#231C3A' }} to="/doctors">Get Started</NavLink>
     </div>
   )
 

@@ -1,5 +1,20 @@
 .nav-bar {
   padding-top: 1em;
   padding-bottom: 1em;
-  font-size: 16px;
+  font-size: 20px;
+  color: black;
+}
+
+.home-link:hover {
+  background-color: #F1574B;
+  border-radius: 8px;
+  color: white;
+}
+
+.doctors-link:hover {
+  background-color: #F1574B;
+   color: #fff;
+   -webkit-border-radius: 8px;
+   -moz-border-radius: 8px;
+   border-radius: 40em;
 }

@@ -10,7 +10,8 @@ const LandingPageQuote = () => {
     <div className="quote-container">
       <div className="quote">
           <img id="brain" src={"psychology.png"}/>
-        <h4 id="quote-text">"A positive attitude gives you power over your circumstances instead of your circumstances having power over you."</h4>
+          <br />
+        <p id="quote-text">"A positive attitude gives you power over your circumstances instead of your circumstances having power over you."</p>
       </div>
     </div>
   )
