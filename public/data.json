@@ -1,0 +1,7 @@
+{
+  "drinks": [
+    { "id": 1, "name": "espresso" },
+    { "id": 2, "name": "capuccino" },
+    { "id": 3, "name": "latte" }
+  ]
+}
