@@ -2,18 +2,27 @@
   padding-top: 10px;
   padding-bottom: 10px;
   font-size: 20px;
-  color: black;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
 
+.home-link {
+  margin-top: 10px;
+  color: black;
+}
+
+.doctors-link {
+  margin-top: 10px;
+  color: black;
+}
 
 .home-link:hover {
   background-color: #F1574B;
   color: white;
   padding: 10px;
   border-radius: 20px;
+  
 }
 
 .doctors-link:hover {

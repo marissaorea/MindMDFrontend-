@@ -41,7 +41,6 @@ class DoctorPage extends React.Component {
     return(
       <div>
         <div className="ui segment">
-          <h2>Mind M.D</h2>
           <div>
             <DoctorSearch handleChange={this.handleChange} />
           </div>
