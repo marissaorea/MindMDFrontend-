@@ -3,8 +3,9 @@ import DoctorProfile from "./DoctorProfile";
 
 class DoctorCard extends React.Component {
 
+
   render() {
-    console.log(this.props)
+    // console.log(this.props)
 
     return (
       <div className="ui unstackable items">
@@ -13,7 +14,7 @@ class DoctorCard extends React.Component {
             <img alt="oh no!" src="DocAvatar.png" />
             <div align="center" className="profile-info">
               <br />
-              <DoctorProfile />
+              <DoctorProfile docProfile={this.props.doctorInfo}/>
             </div>
           </div>
           <div className="content">
