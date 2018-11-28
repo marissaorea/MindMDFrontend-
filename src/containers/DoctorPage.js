@@ -1,7 +1,7 @@
 import React from "react";
 import DoctorList from "../containers/DoctorList";
 import DoctorSearch from "../containers/DoctorSearch";
-import GoogleMap from "../containers/GoogleMap";
+import GoogleMapContainer from "../containers/GoogleMapContainer";
 import "semantic-ui-css/semantic.min.css";
 
 import "../DoctorPage.css";
@@ -50,7 +50,7 @@ class DoctorPage extends React.Component {
             <DoctorList docData={this.filterSearchCity()} />
           </div>
           <div className="six wide column">
-            <GoogleMap docLocation={this.filterSearchCity()} />
+            <GoogleMapContainer docLocation={this.filterSearchCity()} />
           </div>
         </div>
       </div>
