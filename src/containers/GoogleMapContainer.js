@@ -5,14 +5,18 @@ class GoogleMap extends React.Component {
 
   render() {
 
-
+    console.log(this.props)
     return (
       <div className="map-container">
         <Map google={this.props.google} zoom={15} center={{lat: 47.60, lng: -122.32}}>
-          <Marker
-            title={'The marker`s title will appear as a tooltip.'}
-            name={'Doc'}
-            position={{lat: 47.60631, lng: -122.32177}} />
+          {this.props.docData.map(doctor =>
+            <Marker
+              key={doctor.id}
+              title={'The marker`s title will appear as a tooltip.'}
+              name={'Doc'}
+              position={{lat: parseInt(doctor.lat), lng: parseInt(doctor.lon)}} />
+           )}
+
         </Map>
       </div>
     );
