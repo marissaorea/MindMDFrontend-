@@ -1,4 +1,5 @@
 import React from "react";
+import DoctorProfile from './DoctorProfile'
 
 const DoctorCard = (props) => {
 
@@ -8,6 +9,10 @@ const DoctorCard = (props) => {
       <div className="item">
         <div className="image">
           <img alt="oh no!" src="DocAvatar.png" />
+          <div className="profile-info">
+            <br />
+            <span align="center"><DoctorProfile/></span>
+          </div>
         </div>
         <div className="content">
           <br />

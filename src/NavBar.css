@@ -5,9 +5,8 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-flex-start;
-  margin-left: 7em;
+  margin-left: 2em;
 }
-
 
 .home-link {
   background-color: #CA2E55;
