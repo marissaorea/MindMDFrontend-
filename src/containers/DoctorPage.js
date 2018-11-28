@@ -50,7 +50,7 @@ class DoctorPage extends React.Component {
   render() {
     console.log(this.filterSearchCity());
     return (
-      <div>
+      <div className="doctor-page-main">
         <div className="ui segment">
           <div>
             <DoctorSearch handleChange={this.handleChange} />
@@ -64,7 +64,7 @@ class DoctorPage extends React.Component {
               />
             </div>
             <div className="six wide column">
-              <GoogleMapContainer />
+              <GoogleMapContainer docData={this.filterSearchCity()}/>
             </div>
           </div>
         </div>
