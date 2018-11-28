@@ -50,7 +50,7 @@ class DoctorPage extends React.Component {
             <DoctorList docData={this.filterSearchCity()} />
           </div>
           <div className="six wide column">
-            <GoogleMapContainer docLocation={this.filterSearchCity()} />
+            //INSERT GOOGLE CONTAINER HERE
           </div>
         </div>
       </div>

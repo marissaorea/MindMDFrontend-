@@ -11,10 +11,11 @@ const LandingPage = () => {
   return(
     <div className="pusher">
       <div className="inverted vertical center aligned segment">
-        <div className="logo-container">
-          <img alt={"psych"} src={"logo.png"} />
+        
+          <div className="logo-container">
+            <img alt={"psych"} src={"logo.png"} />
           </div>
-      </div>
+        </div>
         <LandingPageQuote />
     </div>
   )
