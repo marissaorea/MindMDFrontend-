@@ -1,6 +1,5 @@
 import React from "react";
 import DoctorCard from "../components/DoctorCard";
-import DoctorProfile from "../components/DoctorProfile"
 
 
 class DoctorList extends React.Component {
@@ -11,7 +10,7 @@ class DoctorList extends React.Component {
     return(
       <div>
         {this.props.docData.map(doctorInfo => (
-          <DoctorCard key={doctorInfo.id} doctorInfo={doctorInfo} />
+          <DoctorCard key={doctorInfo.id} doctorInfo={doctorInfo} renderMore={this.showNext} />
         ))}
         <div>
         </div>

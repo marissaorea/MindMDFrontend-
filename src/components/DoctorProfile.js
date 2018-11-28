@@ -5,7 +5,7 @@ import Popup from "reactjs-popup";
 const DoctorProfile = (props) => {
 
 
-  console.log(props)
+
   return (
     <div>
       <Popup

@@ -1,5 +1,4 @@
 .inverted.vertical.center.aligned.segment {
-
 padding-top: 19em;
 padding-bottom: 14em;
 background-image: url("https://imgur.com/a/tVybqAp");
@@ -29,14 +28,4 @@ h4 {
   font-weight: normal;
   margin-top: 0.5em;
   margin-bottom: 0px;
-
-}
-
-.triangle {
-  width: 0;
-  height: 0;
-  border-top: 60px solid transparent;
-  border-bottom: 60px solid transparent;
-
-  border-left: 60px solid white;
 }

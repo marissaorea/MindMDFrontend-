@@ -3,14 +3,15 @@ import DoctorList from "../containers/DoctorList";
 import DoctorSearch from "../containers/DoctorSearch";
 import GoogleMapContainer from "../containers/GoogleMapContainer";
 import "semantic-ui-css/semantic.min.css";
-
 import "../DoctorPage.css";
 
 class DoctorPage extends React.Component {
   state = {
     docData: [],
     searchTerm: "",
-    clicked: false
+    clicked: false,
+    doctorToDisplayIndex: 0,
+    doctorListCount: 3
   };
 
   componentDidMount() {
@@ -34,24 +35,41 @@ class DoctorPage extends React.Component {
         .toLowerCase()
         .includes(this.state.searchTerm.toLowerCase());
     });
-    return results;
-  }//filter function
+    return results.slice(
+      this.state.doctorToDisplayIndex,
+      this.state.doctorToDisplayIndex + this.state.doctorListCount
+    );
+  }
+
+  showNext = () => {
+    this.setState(currentState => {
+      return { doctorToDisplayIndex: currentState.doctorToDisplayIndex + 3 };
+    });
+  };
 
   render() {
-    return(
+    console.log(this.filterSearchCity());
+    return (
       <div>
         <div className="ui segment">
           <div>
             <DoctorSearch handleChange={this.handleChange} />
           </div>
         </div>
-        <div className=" ui grid">
-          <div className="ten wide column">
-            <DoctorList docData={this.filterSearchCity()} />
+        <div>
+          <div className=" ui grid">
+            <div className="ten wide column">
+              <DoctorList
+                docData={this.filterSearchCity()}
+              />
+            </div>
+            <div className="six wide column">
+              <GoogleMapContainer />
+            </div>
           </div>
-          <div className="six wide column">
-            //INSERT GOOGLE CONTAINER HERE
-          </div>
+        </div>
+        <div>
+          <button id="next-button" className="ui blue basic button" onClick={this.showNext}>NEXT</button>
         </div>
       </div>
     );
