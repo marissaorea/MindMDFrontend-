@@ -1,48 +1,51 @@
 import React from "react";
-import DoctorProfile from './DoctorProfile'
+import DoctorProfile from "./DoctorProfile";
 
-const DoctorCard = (props) => {
+class DoctorCard extends React.Component {
 
+  render() {
+    console.log(this.props)
 
-  return (
-    <div className="ui unstackable items">
-      <div className="item">
-        <div className="image">
-          <img alt="oh no!" src="DocAvatar.png" />
-          <div className="profile-info">
+    return (
+      <div className="ui unstackable items">
+        <div className="item">
+          <div className="image">
+            <img alt="oh no!" src="DocAvatar.png" />
+            <div align="center" className="profile-info">
+              <br />
+              <DoctorProfile />
+            </div>
+          </div>
+          <div className="content">
             <br />
-            <span align="center"><DoctorProfile/></span>
+            <p id="main-header" className="header">
+              Dr. {this.props.doctorInfo.first_name} <br />
+            </p>
+            <p id="main-header" className="header">
+              {this.props.doctorInfo.last_name}
+            </p>
+            <div className="meta">
+              <span>{this.props.doctorInfo.title}</span>
+            </div>
+            <div className="description">
+              <p>{this.props.doctorInfo.office_name}</p>
+              <address>
+                {this.props.doctorInfo.street}
+                <br />
+                <span>{this.props.doctorInfo.city}, </span>
+                {this.props.doctorInfo.street}
+                <br />
+                {this.props.doctorInfo.zip}
+              </address>
+            </div>
+            <div className="extra">Phone: {this.props.doctorInfo.phone}</div>
+            <hr />
+            <br />
           </div>
-        </div>
-        <div className="content">
-          <br />
-          <p id="main-header" className="header">
-            Dr. {props.doctorInfo.first_name} <br />
-          </p>
-          <p id="main-header" className="header">
-            {props.doctorInfo.last_name}
-          </p>
-          <div className="meta">
-            <span>{props.doctorInfo.title}</span>
-          </div>
-          <div className="description">
-            <p>{props.doctorInfo.office_name}</p>
-            <address>
-              {props.doctorInfo.street}
-              <br />
-              <span>{props.doctorInfo.city}, </span>
-              {props.doctorInfo.street}
-              <br />
-              {props.doctorInfo.zip}
-            </address>
-          </div>
-          <div className="extra">{props.doctorInfo.bio}</div>
-          <hr />
-          <br />
         </div>
       </div>
-    </div>
-  );
-};
+    );
+  }
+}
 
 export default DoctorCard;
