@@ -3,10 +3,16 @@
 padding-top: 9em;
 padding-bottom: 14em;
 background-image: url("https://imgur.com/a/tVybqAp");
-background-color: #231C3A
+background-color: #231C3A;
+justify-content: center;
+
 }
 
+.logo-container {
+display: flex;
+justify-content: center;
 
+}
 
 .inverted.header {
   align-items: center;

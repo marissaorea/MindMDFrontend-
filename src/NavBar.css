@@ -1,20 +1,25 @@
 .nav-bar {
-  padding-top: 1em;
-  padding-bottom: 1em;
+  padding-top: 10px;
+  padding-bottom: 10px;
   font-size: 20px;
   color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
+
 
 .home-link:hover {
   background-color: #F1574B;
-  border-radius: 8px;
   color: white;
+  padding: 10px;
+  border-radius: 20px;
 }
 
 .doctors-link:hover {
   background-color: #F1574B;
-   color: #fff;
-   -webkit-border-radius: 8px;
-   -moz-border-radius: 8px;
-   border-radius: 40em;
+  color: #fff;
+  padding: 10px;
+  border-radius: 20px;
+
 }
