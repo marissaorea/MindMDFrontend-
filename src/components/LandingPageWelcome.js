@@ -2,7 +2,6 @@ import React from "react"
 import "../LandingPageWelcome.css";
 import "semantic-ui-css/semantic.min.css";
 import LandingPageQuote from "./LandingPageQuote"
-import VideoDiv from "./VideoDiv"
 
 
 const LandingPage = () => {
@@ -13,7 +12,7 @@ const LandingPage = () => {
     <div className="pusher">
       <div className="inverted vertical center aligned segment">
         <div className="logo-container">
-          <img src={"logo.png"} />
+          <img alt={"psych"} src={"logo.png"} />
           </div>
       </div>
         <LandingPageQuote />

@@ -1,27 +1,19 @@
 import React from "react";
-import { Map, InfoWindow, Marker, GoogleApiWrapper } from "google-maps-react";
+import { Map, Marker, GoogleApiWrapper } from "google-maps-react";
 
 class GoogleMap extends React.Component {
-  
+
   render() {
-    console.log(this.props);
-    // console.log(this.props.onMarkerClick)
+
+    const docPosition = {lat: 47.60631, lng: -122.32177}
     return (
-      <div>
-        <Map style={{width: '100%', height: '100%', position: 'relative'}} google={this.props.google} zoom={16}>
+      <div className="map-container">
+        <Map style={{width: '100%', height: '100%', position: 'relative'}} google={this.props.google} zoom={15}>
           <Marker
             title={'The marker`s title will appear as a tooltip.'}
             name={this.props.office_name}
-            position={{lat: 37.778519, lng: -122.405640}} />
-
-          <InfoWindow onClose={this.onInfoWindowClose}>
-            <div>
-              <h1>test</h1>
-            </div>
-          </InfoWindow>
-
+            postion={docPosition} />
         </Map>
-        ); } }
       </div>
     );
   }

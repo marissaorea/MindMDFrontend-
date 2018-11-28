@@ -2,7 +2,7 @@ import React from "react";
 
 const DoctorCard = (props) => {
 
-  
+
   return (
     <div className="ui unstackable items">
       <div className="item">
@@ -11,17 +11,17 @@ const DoctorCard = (props) => {
         </div>
         <div className="content">
           <br />
-          <a id="main-header" className="header">
+          <p id="main-header" className="header">
             Dr. {props.doctorInfo.first_name} <br />
-          </a>
-          <a id="main-header" className="header">
+          </p>
+          <p id="main-header" className="header">
             {props.doctorInfo.last_name}
-          </a>
+          </p>
           <div className="meta">
             <span>{props.doctorInfo.title}</span>
           </div>
           <div className="description">
-            <p>Clinic: {props.doctorInfo.office_name}</p>
+            <p>{props.doctorInfo.office_name}</p>
             <address>
               {props.doctorInfo.street}
               <br />
