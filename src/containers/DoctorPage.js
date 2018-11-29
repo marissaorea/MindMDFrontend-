@@ -5,6 +5,8 @@ import GoogleMapContainer from "../containers/GoogleMapContainer";
 import "semantic-ui-css/semantic.min.css";
 import "../DoctorPage.css";
 
+// <GoogleMapContainer docData={this.filterSearchCity()}/>
+
 class DoctorPage extends React.Component {
   state = {
     docData: [],
@@ -64,7 +66,7 @@ class DoctorPage extends React.Component {
               />
             </div>
             <div className="six wide column">
-              <GoogleMapContainer docData={this.filterSearchCity()}/>
+              //INSERT GOOGLE MAP COMPONENT
             </div>
           </div>
         </div>
