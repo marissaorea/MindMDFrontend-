@@ -16,7 +16,6 @@ class GoogleMap extends React.Component {
               name={'Doc'}
               position={{lat: parseInt(doctor.lat), lng: parseInt(doctor.lon)}} />
            )}
-
         </Map>
       </div>
     );

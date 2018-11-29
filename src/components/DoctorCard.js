@@ -30,16 +30,8 @@ class DoctorCard extends React.Component {
             </div>
             <div className="description">
               <p>{this.props.doctorInfo.office_name}</p>
-              <address>
-                {this.props.doctorInfo.street}
-                <br />
-                <span>{this.props.doctorInfo.city}, </span>
-                {this.props.doctorInfo.street}
-                <br />
-                {this.props.doctorInfo.zip}
-              </address>
             </div>
-            <div className="extra">Phone: {this.props.doctorInfo.phone}</div>
+            <div className="extra">Phone: {this.props.doctorInfo.bio}</div>
             <hr />
             <br />
           </div>
