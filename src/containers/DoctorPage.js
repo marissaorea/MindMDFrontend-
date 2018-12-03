@@ -49,6 +49,8 @@ class DoctorPage extends React.Component {
     });
   };
 
+
+
   render() {
     console.log(this.filterSearchCity());
     return (
