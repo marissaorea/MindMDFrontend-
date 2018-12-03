@@ -79,8 +79,8 @@ class DoctorPage extends React.Component {
           </div>
         </div>
         <div className="nav-button">
-          <button className="ui blue basic button" onClick={this.showBack}>BACK</button>
-          <button className="ui blue basic button" onClick={this.showNext}>NEXT</button>
+          <button className="ui teal button" onClick={this.showBack}>BACK</button>
+          <button className="ui teal button" onClick={this.showNext}>NEXT</button>
         </div>
       </div>
     );
