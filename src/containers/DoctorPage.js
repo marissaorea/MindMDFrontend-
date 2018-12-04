@@ -14,7 +14,8 @@ class DoctorPage extends React.Component {
     searchTerm: "",
     clicked: false,
     doctorToDisplayIndex: 0,
-    doctorListCount: 3
+    doctorListCount: 3,
+    insuranceData: []
   };
 
   componentDidMount() {
@@ -25,6 +26,14 @@ class DoctorPage extends React.Component {
           docData: doctors
         });
       });
+
+      fetch("http://localhost:3000/api/v1/insurances")
+        .then(response => response.json())
+        .then(insurance => {
+          this.setState({
+          insuranceData: insurance
+          });
+        });
   }
 
   handleChange = event => {
@@ -34,14 +43,20 @@ class DoctorPage extends React.Component {
 
   filterSearchCity() {
     let results = this.state.docData.filter(docInfo => {
-      return docInfo.city
-        .toLowerCase()
-        .includes(this.state.searchTerm.toLowerCase());
+      return docInfo.city.toLowerCase().includes(this.state.searchTerm.toLowerCase());
     });
     return results.slice(
       this.state.doctorToDisplayIndex,
       this.state.doctorToDisplayIndex + this.state.doctorListCount
     );
+  }
+
+  filterByCigna(insurance_company) {
+    if(this.state.insuranceData.length > 0){
+    return this.state.insuranceData.filter(insurance => {
+      return insurance.company === insurance_company
+    });
+    }
   }
 
   showNext = () => {
@@ -56,10 +71,10 @@ class DoctorPage extends React.Component {
     });
   };
 
+  // console.log(insuranceFilter={})
 
   render() {
-    console.log(this.filterSearchCity());
-
+    console.log(this.filterByCigna("Cigna-PPO"))
     return (
       <div className="doctor-page-main">
         <div className="ui segment">
@@ -70,9 +85,7 @@ class DoctorPage extends React.Component {
         <div>
           <div className=" ui grid">
             <div className="ten wide column">
-              <DoctorList
-                docData={this.filterSearchCity()}
-              />
+              <DoctorList docData={this.filterSearchCity()} />
             </div>
             <div className="six wide column">
             </div>

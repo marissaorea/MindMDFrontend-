@@ -1,9 +1,11 @@
 import React from "react";
 import "../DoctorSearch.css";
+import DropDown from "../components/InsuranceDropdown"
 
 const DoctorSearch = (props) => {
 
-  return (
+  return(
+    <div className="filter-containers">
       <div className="search-bar-container">
         <input
           type="text"
@@ -12,7 +14,10 @@ const DoctorSearch = (props) => {
         />
         <i className="circular search link icon" />
       </div>
-
+        <div>
+          <DropDown />
+        </div>
+    </div>
   );
 };
 

@@ -1,4 +1,15 @@
-input{
+.search-bar-container {
+  margin-left: -1%;
+
+}
+
+.filter-containers {
+  display: flex;
+  justify-content: flex-end;
+  justify-content: space-between;
+}
+
+input {
   width: 130px;
    box-sizing: border-box;
    border: 2px solid #ccc;
@@ -11,7 +22,7 @@ input{
    -webkit-transition: width 0.4s ease-in-out;
    transition: width 0.4s ease-in-out;
    border-color: white;
-   margin-left: 2.9em
+   margin-left: 2.9em;
 }
 
 input[type=text]:focus {
