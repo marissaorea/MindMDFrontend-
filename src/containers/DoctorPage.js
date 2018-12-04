@@ -56,6 +56,9 @@ class DoctorPage extends React.Component {
     return this.state.insuranceData.filter(insurance => {
       return insurance.company === insurance_company
     });
+    this.setState({
+
+    })
   }
 
   showNext = () => {
