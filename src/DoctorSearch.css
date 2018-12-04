@@ -1,6 +1,19 @@
-.search-bar-container{
-  margin-top: 30px;
-  margin-bottom: 30px;
-  position: relative;
-  background-color: yellow;
+input{
+  width: 130px;
+   box-sizing: border-box;
+   border: 2px solid #ccc;
+   border-radius: 4px;
+   font-size: 16px;
+   background-color: white;
+   background-position: 3px;
+   background-repeat: no-repeat;
+   padding: 9px 10px 9px 5px;
+   -webkit-transition: width 0.4s ease-in-out;
+   transition: width 0.4s ease-in-out;
+   border-color: white;
+   margin-left: 2.9em
+}
+
+input[type=text]:focus {
+  width: 30%;
 }

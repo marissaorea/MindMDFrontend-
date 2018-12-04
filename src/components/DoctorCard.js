@@ -1,6 +1,6 @@
 import React from "react";
 import DoctorProfile from "./DoctorProfile";
-
+import "../DoctorCard.css";
 
 
 class DoctorCard extends React.Component {
@@ -12,14 +12,14 @@ class DoctorCard extends React.Component {
     return (
       <div className="ui unstackable items">
         <div className="item">
-          <div className="image">
+          <div className="doc-image">
             <img alt="oh no!" src={this.props.doctorInfo.img_url} />
             <div align="center" className="profile-info">
               <br />
               <DoctorProfile docProfile={this.props.doctorInfo}/>
             </div>
           </div>
-          <div className="content">
+          <div className="doc-content">
             <br />
             <p id="main-header" className="header">
               Dr. {this.props.doctorInfo.first_name} <br />
