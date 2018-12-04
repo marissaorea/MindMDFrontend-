@@ -13,7 +13,6 @@ class DoctorProfile extends React.Component {
 
   render() {
     const { open, dimmer } = this.state;
-    console.log(this.props);
 
     let style = {
       background: "#231C3A"

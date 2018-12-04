@@ -2,13 +2,28 @@ import React from "react";
 import { Dropdown } from 'semantic-ui-react'
 
 
-const InsuranceDropdown = () => {
+const InsuranceDropdown = (props) => {
 
-  return (
+  const handleChange = (event) => {
+    props.insurance(event.target.value)
+  }
+
+  return(
     <div id="insurance-drop">
-      <select className='ui search selection dropdown'> <option value="">Gender</option>
-        <option value="1">Male</option>
-        <option value="0">Female</option>
+      <select onChange={handleChange} className='ui search selection dropdown'><option value="">Filter by Insurance</option>
+        <option value="Cigna-PPO">Cigna-PPO</option>
+        <option value="Cigna-HMO">Cigna-HMO</option>
+        <option value="Humana-Choice-Care-Network-PPO">Humana-Choice-Care-Network-PPO</option>
+        <option value="Aetna-PPO">Aetna-PPO</option>
+        <option value="Bcbsbluecard-PPO">Bcbsbluecard-PPO</option>
+        <option value="Multiplan-PPO">Multiplan-PPO</option>
+        <option value="Aetna-HMO">Aetna-HMO</option>
+        <option value="Medicare">Medicare</option>
+        <option value="Medicaid">Medicaid</option>
+        <option value="GreatWest-PPO">GreatWest-PPO</option>
+        <option value="Empire-Blue-PPO">Empire-Blue-PPO</option>
+        <option value="HIP-Insurance-Group">HIP-Insurance-Group</option>
+        <option value="WellCare-Group">WellCare-Group</option>
       </select>
     </div>
   );

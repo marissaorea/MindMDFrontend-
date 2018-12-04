@@ -1,8 +1,10 @@
 import React from "react";
 import "../DoctorSearch.css";
-import DropDown from "../components/InsuranceDropdown"
+import InsuranceDropdown from "../components/InsuranceDropdown"
 
 const DoctorSearch = (props) => {
+
+  console.log(props)
 
   return(
     <div className="filter-containers">
@@ -15,7 +17,7 @@ const DoctorSearch = (props) => {
         <i className="circular search link icon" />
       </div>
         <div>
-          <DropDown />
+          <InsuranceDropdown insurance={props.insurance} />
         </div>
     </div>
   );

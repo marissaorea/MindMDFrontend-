@@ -15,7 +15,8 @@ class DoctorPage extends React.Component {
     clicked: false,
     doctorToDisplayIndex: 0,
     doctorListCount: 3,
-    insuranceData: []
+    insuranceData: [],
+    filteredInsurance: []
   };
 
   componentDidMount() {
@@ -51,12 +52,10 @@ class DoctorPage extends React.Component {
     );
   }
 
-  filterByCigna(insurance_company) {
-    if(this.state.insuranceData.length > 0){
+  filterByInsurance = (insurance_company) => {
     return this.state.insuranceData.filter(insurance => {
       return insurance.company === insurance_company
     });
-    }
   }
 
   showNext = () => {
@@ -74,12 +73,13 @@ class DoctorPage extends React.Component {
   // console.log(insuranceFilter={})
 
   render() {
-    console.log(this.filterByCigna("Cigna-PPO"))
+    console.log(this.filterByInsurance("Cigna-PPO"))
+
     return (
       <div className="doctor-page-main">
         <div className="ui segment">
           <div>
-            <DoctorSearch handleChange={this.handleChange} />
+            <DoctorSearch handleChange={this.handleChange} insurance={this.filterByInsurance} />
           </div>
         </div>
         <div>
