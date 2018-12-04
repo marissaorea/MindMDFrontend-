@@ -1,35 +1,65 @@
-import React from "react";
+import React, { Component } from "react";
 import "semantic-ui-css/semantic.min.css";
-import Popup from "reactjs-popup";
+// import Popup from "reactjs-popup";
+import { Button, Header, Image, Modal } from "semantic-ui-react";
 
-const DoctorProfile = (props) => {
+class DoctorProfile extends React.Component {
+  state = {
+    open: false
+  };
 
+  show = dimmer => () => this.setState({ dimmer, open: true });
+  close = () => this.setState({ open: false });
 
+  render() {
+    const { open, dimmer } = this.state;
+    console.log(this.props);
 
-  return (
-    <div>
-      <Popup
-        trigger={<button className="ui blue basic button">Contact</button>}
-        modal
-        closeOnDocumentClick
+    let style = {
+      background: "#231C3A"
+    }
+
+    let space = {
+      padding: '10em'
+    }
+
+    return (
+      <div>
+        <Button
+          className="ui blue button"
+          style={style}
+          onClick={this.show("blurring")}
         >
-        <span>
-          <h1>Contact Details</h1>
-            <hr />
-            <br />
-            <address>
-              {props.docProfile.street}
-              <br />
-              <span>{props.docProfile.city}, {props.docProfile.zip}</span>
-              <br />
-            </address>
-              <br />
-            <p>Phone: {props.docProfile.phone}</p>
-            <br />
-        </span>
-      </Popup>
-    </div>
-  );
-};
+          Contact
+        </Button>
+
+        <Modal dimmer={dimmer} open={open} onClose={this.close}>
+          <Modal.Header>Contact Details</Modal.Header>
+          <Modal.Content image>
+          <Image space={space} wrapped size='small' src='./bdcard.png' />
+            <Modal.Description>
+              <Header>Address:</Header>
+              <address >
+                {this.props.docProfile.street}, <br/>
+                <span>{this.props.docProfile.city} {this.props.docProfile.state}</span>
+                  {this.props.docProfile.zipcode}
+              </address>
+              <h5>Phone:  {this.props.docProfile.phone}</h5>
+            </Modal.Description>
+          </Modal.Content>
+          <Modal.Actions>
+            <Button
+              positive
+              icon="checkmark"
+              labelPosition="right"
+              content="Close"
+              onClick={this.close}
+            />
+          </Modal.Actions>
+        </Modal>
+      </div>
+    );
+  }
+}
 
 export default DoctorProfile;
