@@ -5,13 +5,13 @@ class DoctorCard extends React.Component {
 
 
   render() {
-    // console.log(this.props)
+    console.log(this.props)
 
     return (
       <div className="ui unstackable items">
         <div className="item">
           <div className="image">
-            <img alt="oh no!" src="DocAvatar.png" />
+            <img alt="oh no!" src={this.props.doctorInfo.img_url} />
             <div align="center" className="profile-info">
               <br />
               <DoctorProfile docProfile={this.props.doctorInfo}/>
