@@ -5,13 +5,13 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-flex-start;
-  background-color: #231C3A;
+  background-color: #DFECFD;
 }
 
 .home-link {
-  color:  white;
+  color:  #231C3A;
   border-radius: 40px;
-  border: 1px solid white;
+  border: 1px solid #231C3A;
   -webkit-border-radius: 40px;
   -moz-border-radius: 40px;
    padding: 10px 2em;

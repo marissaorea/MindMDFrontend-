@@ -6,8 +6,6 @@ import "semantic-ui-css/semantic.min.css";
 import "../DoctorPage.css";
 
 
-
-
 class DoctorPage extends React.Component {
   state = {
     docData: [],
@@ -88,7 +86,7 @@ class DoctorPage extends React.Component {
               <DoctorList docData={this.filterSearchCity()} />
             </div>
             <div className="six wide column">
-            //INSERT MAP COMPONENT HERE
+            <GoogleMapContainer docData={this.filterSearchCity()}/>
             </div>
           </div>
         </div>
