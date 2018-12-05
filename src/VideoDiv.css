@@ -1,0 +1,19 @@
+.main-gif-containers {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  margin-left: 13em;
+  padding: 1em;
+}
+
+#stat {
+  font-size: 20px;
+}
+
+.text-container {
+  position: relative;
+  margin: 8em;
+  display: in-line;
+  text-align: center; 
+}

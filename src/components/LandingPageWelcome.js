@@ -2,6 +2,7 @@ import React from "react"
 import "../LandingPageWelcome.css";
 import "semantic-ui-css/semantic.min.css";
 import LandingPageQuote from "./LandingPageQuote"
+import VideoDiv from "./VideoDiv"
 
 
 const LandingPage = () => {
@@ -16,6 +17,7 @@ const LandingPage = () => {
           </div>
         </div>
         <LandingPageQuote />
+        <VideoDiv />
     </div>
   )
 

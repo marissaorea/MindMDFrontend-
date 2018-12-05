@@ -11,12 +11,21 @@ h1 {
   justify-content:center;
 }
 
+#author{
+  line-height: 0;
+  display: flex;
+  justify-content:center;
+  font-size: 19px;
+  font-weight: bold;
+  color: #231C3A;
+}
+
 #quote-text {
   color: #231C3A;
   text-align: center;
   vertical-align: middle;
   align-content: center;
-  font-size: 23px;
+  font-size: 18px;
 }
 
 #brain {
