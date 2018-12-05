@@ -21,10 +21,9 @@ class DoctorCard extends React.Component {
           <div className="doc-content">
             <br />
             <p id="main-header" className="header">
-              <span>Dr. {this.props.doctorInfo.first_name} {this.props.doctorInfo.last_name}</span>
+              <span> Dr. {this.props.doctorInfo.first_name} {this.props.doctorInfo.last_name}</span>
             </p>
             <p id="main-header" className="header">
-
             </p>
             <div className="meta">
               <span>{this.props.doctorInfo.title}</span>

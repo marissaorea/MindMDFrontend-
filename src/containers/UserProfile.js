@@ -20,6 +20,7 @@ class UserProfile extends Component {
 
 
   render() {
+    console.log(this.state)
     return (
       <div>
         <ProfileList users={this.state.users}/>

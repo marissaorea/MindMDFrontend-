@@ -29,7 +29,7 @@ class DoctorProfile extends React.Component {
           style={style}
           onClick={this.show("blurring")}
         >
-          Contact
+        Contact
         </Button>
 
         <Modal dimmer={dimmer} open={open} onClose={this.close}>

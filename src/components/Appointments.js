@@ -10,10 +10,9 @@ const Appointment = (props) => {
     <div class="ui cards">
       <div class="card">
         <div class="content">
-          <div class="header">Booked Appointment</div>
-          <div class="meta">Friend</div>
+          <div class="header">Confirmed Appointment</div>
           <div class="description">
-            <p><b>Date:</b>Saturday, December 15, 2018</p>
+            <p><b>Date:</b>Saturday, December 6, 2018</p>
             <p><b>Time:</b>12:15PM</p>
             <p><b>Doctor:</b>Dr. Douglas Saphier</p>
             </div>

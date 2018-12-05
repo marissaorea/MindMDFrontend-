@@ -14,7 +14,7 @@ class DoctorPage extends React.Component {
     doctorToDisplayIndex: 0,
     doctorListCount: 3,
     insuranceData: [],
-    selectedValues: []
+    selectedValues: ""
   };
 
   componentDidMount() {
@@ -33,6 +33,10 @@ class DoctorPage extends React.Component {
           insuranceData: insurance
           });
         });
+  }
+
+  doctorsInScope = () => {
+    return this.state.insuranceData.filter(iD=>iD.company===this.state.selectedValues).map(iD=>iD.doctor)
   }
 
   handleChange = event => {
@@ -59,7 +63,7 @@ class DoctorPage extends React.Component {
     handleDropDown = (event) => {
       let selectedValues = event.target.value
       console.log("Old selectedValues are", this.state.selectedValues)
-      this.setState({selectedValues},()=>console.log("New selectedValues are", this.state.selectedValues))
+      this.setState({selectedValues},()=>{console.log("New selectedValues are", this.state.selectedValues);this.doctorsInScope()})
     }
 
 
@@ -79,13 +83,12 @@ class DoctorPage extends React.Component {
   // console.log(insuranceFilter={})
 
   render() {
-    console.log(this.filterByInsurance("Cigna-PPO"))
 
     return (
       <div className="doctor-page-main">
         <div className="ui segment">
           <div>
-            <DoctorSearch handleChange={this.handleChange} insurance={this.filterByInsurance} selectedValues={this.state.selectedValues} handleDropDown={this.handleDropDown} />
+            <DoctorSearch handleChange={this.handleChange} handleDropDown={this.handleDropDown} />
           </div>
         </div>
         <div>

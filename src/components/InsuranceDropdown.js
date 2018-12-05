@@ -3,11 +3,8 @@ import { Dropdown } from 'semantic-ui-react'
 
 
 const InsuranceDropdown = (props) => {
-  
-  console.log("onChange is", props)
-  // const handleChange = (event) => {
-  //   props.insurance(event.target.value)
-  // }
+
+
 
   return(
     <div id="insurance-drop">

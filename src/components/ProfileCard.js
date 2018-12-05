@@ -8,16 +8,16 @@ const ProfileCard = (props) => {
 
   return (
     <div className="main-div">
-      <div class="ui card">
-        <img src={props.user.profile_img} class="ui image" />
-        <div class="content">
-          <div class="header">{props.user.name}r</div>
-          <div class="description">
-            Marissa is a sound engineer living in Brooklyn who enjoys Mariachi music when she's stressed.
+      <div className="ui card">
+        <img src="./marissa.jpg" className="ui image" />
+        <div className="content">
+          <div className="header">{props.user.name}</div>
+          <div className="description">
+            Mood Today: Cheerful
           </div>
         </div>
-        <div class="extra content">
-          <div class="meta">Mood Today: Cheerful</div>
+        <div className="extra content">
+          <div className="meta">Date: Thursday, December 15, 2018</div>
         </div>
       </div>
       <div >
