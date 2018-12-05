@@ -15,7 +15,7 @@ class DoctorProfile extends React.Component {
     const { open, dimmer } = this.state;
 
     let style = {
-      background: "#231C3A"
+      background: "#00B4AC"
     }
 
     let space = {

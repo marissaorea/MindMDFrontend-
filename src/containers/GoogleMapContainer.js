@@ -8,7 +8,7 @@ class GoogleMap extends React.Component {
     console.log(this.props)
     return (
       <div className="map-container">
-        <Map google={this.props.google} zoom={15} center={{lat: 47.60, lng: -122.32}}>
+        <Map google={this.props.google} zoom={10} center={{lat: 40.90866, lng: -73.96559}}>
           {this.props.docData.map(doctor =>
             <Marker
               key={doctor.id}

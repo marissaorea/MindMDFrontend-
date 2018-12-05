@@ -6,7 +6,7 @@ import "semantic-ui-css/semantic.min.css";
 import "../DoctorPage.css";
 
 
-// <GoogleMapContainer docData={this.filterSearchCity()}/>
+
 
 class DoctorPage extends React.Component {
   state = {
@@ -88,12 +88,13 @@ class DoctorPage extends React.Component {
               <DoctorList docData={this.filterSearchCity()} />
             </div>
             <div className="six wide column">
+            //INSERT MAP COMPONENT HERE
             </div>
           </div>
         </div>
         <div className="nav-button">
-          <button className="ui teal button" onClick={this.showBack}>BACK</button>
-          <button className="ui teal button" onClick={this.showNext}>NEXT</button>
+          <button className="ui black button" onClick={this.showBack}>BACK</button>
+          <button className="ui black button" onClick={this.showNext}>NEXT</button>
         </div>
       </div>
     );
