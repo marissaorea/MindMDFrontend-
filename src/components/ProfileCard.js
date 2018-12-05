@@ -7,7 +7,7 @@ const ProfileCard = (props) => {
 
 
   return (
-    <div>
+    <div className="main-div">
       <div class="ui card">
         <img src={props.user.profile_img} class="ui image" />
         <div class="content">
@@ -20,7 +20,7 @@ const ProfileCard = (props) => {
           <div class="meta">Mood Today: Cheerful</div>
         </div>
       </div>
-      <div className="appointment-card">
+      <div >
         <Appointment />
       </div>
     </div>

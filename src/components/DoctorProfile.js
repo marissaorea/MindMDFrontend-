@@ -33,7 +33,7 @@ class DoctorProfile extends React.Component {
         </Button>
 
         <Modal dimmer={dimmer} open={open} onClose={this.close}>
-          <Modal.Header>Contact Details</Modal.Header>
+          <Modal.Header>{this.props.docProfile.first_name} {this.props.docProfile.last_name}</Modal.Header>
           <Modal.Content image>
           <Image space={space} wrapped size='small' src='./bdcard.png' />
             <Modal.Description>

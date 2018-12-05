@@ -1,9 +1,9 @@
 .ui.card {
-  margin-left: 3em;
-  margin-top: 3px;
+  margin-right: 3em;
 }
 
-.appointment-card {
+.main-div{
+  margin-top: 3em;
   display: flex;
   justify-content: center;
 }
