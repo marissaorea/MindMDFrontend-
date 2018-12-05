@@ -1,6 +1,9 @@
 import React from "react";
+import "../ProfileCard.css";
+import Appointment from "../components/Appointments"
 
-const ProfileCard = props => {
+
+const ProfileCard = (props) => {
 
 
   return (
@@ -16,6 +19,9 @@ const ProfileCard = props => {
         <div class="extra content">
           <div class="meta">Mood Today: Cheerful</div>
         </div>
+      </div>
+      <div className="appointment-card">
+        <Appointment />
       </div>
     </div>
   );

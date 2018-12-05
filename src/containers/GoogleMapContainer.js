@@ -10,7 +10,7 @@ class GoogleMapContainer extends React.Component {
     return(
       <Map
         item
-        xs={20}
+        xs={20} debugger
         google={this.props.google}
         zoom={3}
         initialCenter={{lat: 39.64820, lng: -75.7111 }}
