@@ -12,8 +12,8 @@ class GoogleMapContainer extends React.Component {
         item
         xs={20}
         google={this.props.google}
-        zoom={14}
-        initialCenter={{ lat: 39.64820, lng: -75.7111 }}
+        zoom={3}
+        initialCenter={{lat: 39.64820, lng: -75.7111 }}
       >
       {this.props.docData.map(doctor => (
            <Marker

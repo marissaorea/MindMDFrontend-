@@ -17,7 +17,7 @@ const DoctorSearch = (props) => {
         <i className="circular search link icon" />
       </div>
         <div>
-          <InsuranceDropdown insurance={props.insurance} />
+          <InsuranceDropdown insurance={props.insurance} handleDropDown={props.handleDropDown} />
         </div>
     </div>
   );

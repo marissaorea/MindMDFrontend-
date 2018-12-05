@@ -14,7 +14,7 @@ class DoctorPage extends React.Component {
     doctorToDisplayIndex: 0,
     doctorListCount: 3,
     insuranceData: [],
-    filteredInsurance: []
+    selectedValues: []
   };
 
   componentDidMount() {
@@ -56,8 +56,16 @@ class DoctorPage extends React.Component {
     });
   }
 
+    handleDropDown = (event) => {
+      let selectedValues = event.target.value
+      console.log("Old selectedValues are", this.state.selectedValues)
+      this.setState({selectedValues},()=>console.log("New selectedValues are", this.state.selectedValues))
+    }
+
+
   showNext = () => {
     this.setState(currentState => {
+      debugger
       return { doctorToDisplayIndex: currentState.doctorToDisplayIndex + 3 };
     });
   };
@@ -77,7 +85,7 @@ class DoctorPage extends React.Component {
       <div className="doctor-page-main">
         <div className="ui segment">
           <div>
-            <DoctorSearch handleChange={this.handleChange} insurance={this.filterByInsurance} />
+            <DoctorSearch handleChange={this.handleChange} insurance={this.filterByInsurance} selectedValues={this.state.selectedValues} handleDropDown={this.handleDropDown} />
           </div>
         </div>
         <div>

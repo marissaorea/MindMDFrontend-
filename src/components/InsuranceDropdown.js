@@ -3,14 +3,15 @@ import { Dropdown } from 'semantic-ui-react'
 
 
 const InsuranceDropdown = (props) => {
-
-  const handleChange = (event) => {
-    props.insurance(event.target.value)
-  }
+  
+  console.log("onChange is", props)
+  // const handleChange = (event) => {
+  //   props.insurance(event.target.value)
+  // }
 
   return(
     <div id="insurance-drop">
-      <select onChange={handleChange} className='ui search selection dropdown'><option value="">Filter by Insurance</option>
+      <select onChange={props.handleDropDown} className='ui search selection dropdown'><option value="">Filter by Insurance</option>
         <option value="Cigna-PPO">Cigna-PPO</option>
         <option value="Cigna-HMO">Cigna-HMO</option>
         <option value="Humana-Choice-Care-Network-PPO">Humana-Choice-Care-Network-PPO</option>

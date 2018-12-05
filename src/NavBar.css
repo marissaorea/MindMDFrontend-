@@ -29,3 +29,14 @@
   margin-right: 30px;
 
 }
+
+.profile-link {
+  background-color: #F1574B;
+  color: #fff;
+  border-radius: 40px;
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+   padding: 10px 2em;
+  margin-right: 30px;
+
+}

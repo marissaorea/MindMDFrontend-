@@ -4,8 +4,10 @@ import '../App.css';
 import DoctorPage from '../containers/DoctorPage'
 import NavBar from '../components/NavBar'
 import LandingPageWelcome from '../components/LandingPageWelcome'
+import UserProfile from '../containers/UserProfile'
 
 class App extends Component {
+
 
 
 
@@ -16,6 +18,7 @@ class App extends Component {
           <NavBar />
           <Route exact path="/" component={LandingPageWelcome} />
           <Route exact path="/doctors" component={DoctorPage} />
+          <Route exact path="/profile" component={UserProfile} />
         </div>
       </Router>
     );
