@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "semantic-ui-css/semantic.min.css";
 // import Popup from "reactjs-popup";
 import { Button, Header, Image, Modal } from "semantic-ui-react";
+import MyCalendar from "./MyCalendar"
 
 
 
