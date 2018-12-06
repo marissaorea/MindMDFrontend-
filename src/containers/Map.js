@@ -29,6 +29,7 @@ class Map extends React.Component {
           <Marker position={[location.lat,location.lon]}>
             <Popup>
               {location.first_name}, {location.last_name}
+              {location.phone}
             </Popup>
           </Marker>
         )}
