@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import "semantic-ui-css/semantic.min.css";
 // import Popup from "reactjs-popup";
 import { Button, Header, Image, Modal } from "semantic-ui-react";
+import ResetRating from "../containers/ResetRating"
+
 
 class DoctorProfile extends React.Component {
   state = {
@@ -34,6 +36,7 @@ class DoctorProfile extends React.Component {
 
         <Modal dimmer={dimmer} open={open} onClose={this.close}>
           <Modal.Header>{this.props.docProfile.first_name} {this.props.docProfile.last_name}</Modal.Header>
+
           <Modal.Content image>
           <Image space={space} wrapped size='small' src='./bdcard.png' />
             <Modal.Description>
