@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "semantic-ui-css/semantic.min.css";
 // import Popup from "reactjs-popup";
 import { Button, Header, Image, Modal } from "semantic-ui-react";
-import ResetRating from "../containers/ResetRating"
+
 
 
 class DoctorProfile extends React.Component {

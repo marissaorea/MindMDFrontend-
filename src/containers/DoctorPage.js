@@ -2,10 +2,10 @@ import React from "react";
 import DoctorList from "../containers/DoctorList";
 import DoctorSearch from "../containers/DoctorSearch";
 import GoogleMapContainer from "../containers/GoogleMapContainer";
+import LoadingSpinner from '../components/LoadingContainer'
 import "semantic-ui-css/semantic.min.css";
 import "../DoctorPage.css";
 
-// <GoogleMapContainer docData={this.filterSearchCity()}/>
 
 class DoctorPage extends React.Component {
   state = {
@@ -15,7 +15,8 @@ class DoctorPage extends React.Component {
     doctorToDisplayIndex: 0,
     doctorListCount: 3,
     insuranceData: [],
-    selectedValues: ""
+    selectedValues: "",
+    loading: true
   };
 
   componentDidMount() {
@@ -23,7 +24,8 @@ class DoctorPage extends React.Component {
       .then(response => response.json())
       .then(doctors => {
         this.setState({
-          docData: doctors
+          docData: doctors,
+          loading: false
         });
       });
 
@@ -95,11 +97,11 @@ class DoctorPage extends React.Component {
         <div>
           <div className=" ui grid">
             <div className="ten wide column">
-              <DoctorList docData={this.filterSearchCity()} insuranceData={this.doctorsInScope()} />
 
+              {this.state.loading ? <LoadingSpinner /> : <DoctorList docData={this.filterSearchCity()} insuranceData={this.doctorsInScope()} /> }
             </div>
             <div className="six wide column">
-            //INSERT GOOGLE MAP HERE LINK 9
+            {this.state.searchTerm ? null : <GoogleMapContainer docData={this.filterSearchCity()}/>}
             </div>
           </div>
         </div>
