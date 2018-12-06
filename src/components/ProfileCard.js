@@ -1,6 +1,7 @@
 import React from "react";
 import "../ProfileCard.css";
 import Appointment from "../components/Appointments"
+// import Chart from "../components/Chart"
 
 
 const ProfileCard = (props) => {

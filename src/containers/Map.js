@@ -28,7 +28,8 @@ class Map extends React.Component {
           {this.props.docData.map(location =>
           <Marker position={[location.lat,location.lon]}>
             <Popup>
-              {location.first_name}, {location.last_name}
+              {location.first_name}, {location.last_name},
+              {location.street}, {location.city}, {location.state}, {location.zipcode}
               {location.phone}
             </Popup>
           </Marker>

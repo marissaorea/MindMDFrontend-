@@ -98,7 +98,7 @@ class DoctorPage extends React.Component {
               {this.state.loading ? <LoadingSpinner /> : <DoctorList docData={this.filterSearchCity()} insuranceData={this.doctorsInScope()} /> }
             </div>
             <div className="six wide column">
-            {this.state.searchTerm ? null : <Map docData={this.filterSearchCity()}/>}
+            <Map docData={this.filterSearchCity()}/>
             </div>
           </div>
         </div>
