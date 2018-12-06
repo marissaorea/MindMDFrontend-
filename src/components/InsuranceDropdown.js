@@ -4,8 +4,6 @@ import { Dropdown } from 'semantic-ui-react'
 
 const InsuranceDropdown = (props) => {
 
-
-
   return(
     <div id="insurance-drop">
       <select onChange={props.handleDropDown} className='ui search selection dropdown'><option value="">Filter by Insurance</option>

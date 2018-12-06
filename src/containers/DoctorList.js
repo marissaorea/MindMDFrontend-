@@ -4,7 +4,6 @@ import DoctorCard from "../components/DoctorCard";
 
 class DoctorList extends React.Component {
 
-
   render() {
 
     return(
@@ -13,6 +12,9 @@ class DoctorList extends React.Component {
           <DoctorCard key={doctorInfo.id} doctorInfo={doctorInfo} renderMore={this.showNext} />
         ))}
         <div>
+        {this.props.insuranceData.map(doctorInfo => (
+          <DoctorCard key={doctorInfo.id} doctorInfo={doctorInfo}  />
+        ))}
         </div>
       </div>
     );

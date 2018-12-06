@@ -64,7 +64,7 @@ class DoctorPage extends React.Component {
     handleDropDown = (event) => {
       let selectedValues = event.target.value
       console.log("Old selectedValues are", this.state.selectedValues)
-      this.setState({selectedValues},()=>{console.log("New selectedValues are", this.state.selectedValues);this.doctorsInScope()})
+      this.setState({selectedValues})
     }
 
 
@@ -83,7 +83,8 @@ class DoctorPage extends React.Component {
   // console.log(insuranceFilter={})
 
   render() {
-    console.log(this.doctorsInScope)
+    console.log(this.doctorsInScope())
+
     return (
       <div className="doctor-page-main">
         <div className="ui segment">
@@ -94,7 +95,8 @@ class DoctorPage extends React.Component {
         <div>
           <div className=" ui grid">
             <div className="ten wide column">
-              <DoctorList docData={this.filterSearchCity()} />
+              <DoctorList docData={this.filterSearchCity()} insuranceData={this.doctorsInScope()} />
+
             </div>
             <div className="six wide column">
             //INSERT GOOGLE MAP HERE LINK 9
