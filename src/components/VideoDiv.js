@@ -8,7 +8,7 @@ const VideoDiv = () => {
       <img src="./depression.gif"/>
       <div className="text-container">
         <h1 id="percent">20%</h1>
-        <p id="stat"> Of Americans will experience depression sometime in their lifetime. Depression is a real illness and help is available.</p>
+        <p id="stat"> Of Americans will experience depression sometime in their lifetime.</p>
         <p id="stat"> Check out our Curated list of Psychiatrists.</p>
       </div>
     </div>

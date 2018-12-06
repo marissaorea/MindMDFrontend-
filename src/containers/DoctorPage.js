@@ -5,6 +5,7 @@ import GoogleMapContainer from "../containers/GoogleMapContainer";
 import "semantic-ui-css/semantic.min.css";
 import "../DoctorPage.css";
 
+// <GoogleMapContainer docData={this.filterSearchCity()}/>
 
 class DoctorPage extends React.Component {
   state = {
@@ -69,7 +70,6 @@ class DoctorPage extends React.Component {
 
   showNext = () => {
     this.setState(currentState => {
-      debugger
       return { doctorToDisplayIndex: currentState.doctorToDisplayIndex + 3 };
     });
   };
@@ -83,7 +83,7 @@ class DoctorPage extends React.Component {
   // console.log(insuranceFilter={})
 
   render() {
-
+    console.log(this.doctorsInScope)
     return (
       <div className="doctor-page-main">
         <div className="ui segment">
@@ -97,7 +97,7 @@ class DoctorPage extends React.Component {
               <DoctorList docData={this.filterSearchCity()} />
             </div>
             <div className="six wide column">
-            <GoogleMapContainer docData={this.filterSearchCity()}/>
+            //INSERT GOOGLE MAP HERE LINK 9
             </div>
           </div>
         </div>

@@ -9,7 +9,7 @@ const ProfileCard = (props) => {
   return (
     <div className="main-div">
       <div className="ui card">
-        <img src="./marissa.jpg" className="ui image" />
+        <img src="https://semantic-ui.com/images/avatar/large/helen.jpg" className="ui image" />
         <div className="content">
           <div className="header">{props.user.name}</div>
           <div className="description">
@@ -17,7 +17,7 @@ const ProfileCard = (props) => {
           </div>
         </div>
         <div className="extra content">
-          <div className="meta">Date: Thursday, December 15, 2018</div>
+          <div className="meta">Date: Thursday, December 6, 2018</div>
         </div>
       </div>
       <div >
