@@ -1,7 +1,7 @@
 import React from "react";
 import "../ProfileCard.css";
 import Appointment from "../components/Appointments"
-// import Chart from "../components/Chart"
+import Chart from "../components/Chart"
 
 
 const ProfileCard = (props) => {
@@ -23,6 +23,7 @@ const ProfileCard = (props) => {
       </div>
       <div >
         <Appointment />
+        <Chart />
       </div>
     </div>
   );

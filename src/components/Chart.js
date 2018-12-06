@@ -1,8 +1,8 @@
-import React, {Component} from 'react';
-import {Bar, Line, Pie} from "chart.js"
+import React from 'react';
+import {Bar} from "react-chartjs-2";
 
 
-class Chart extends Component {
+class Chart extends React.Component {
   constructor(props) {
     super(props)
 
