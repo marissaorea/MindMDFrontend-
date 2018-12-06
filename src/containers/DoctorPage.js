@@ -1,7 +1,7 @@
 import React from "react";
 import DoctorList from "../containers/DoctorList";
 import DoctorSearch from "../containers/DoctorSearch";
-import GoogleMapContainer from "../containers/GoogleMapContainer";
+import Map from "../containers/Map";
 import LoadingSpinner from '../components/LoadingContainer'
 import "semantic-ui-css/semantic.min.css";
 import "../DoctorPage.css";
@@ -82,8 +82,6 @@ class DoctorPage extends React.Component {
     });
   };
 
-  // console.log(insuranceFilter={})
-
   render() {
     console.log(this.doctorsInScope())
 
@@ -97,11 +95,10 @@ class DoctorPage extends React.Component {
         <div>
           <div className=" ui grid">
             <div className="ten wide column">
-
               {this.state.loading ? <LoadingSpinner /> : <DoctorList docData={this.filterSearchCity()} insuranceData={this.doctorsInScope()} /> }
             </div>
             <div className="six wide column">
-            {this.state.searchTerm ? null : <GoogleMapContainer docData={this.filterSearchCity()}/>}
+            {this.state.searchTerm ? null : <Map docData={this.filterSearchCity()}/>}
             </div>
           </div>
         </div>
