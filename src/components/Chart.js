@@ -35,7 +35,7 @@ class Chart extends React.Component {
       <Bar
         data={this.state.chartData}
         options={{
-          maintainAspectRatio: false
+          maintainAspectRatio: true
         }}
       />
       </div>
