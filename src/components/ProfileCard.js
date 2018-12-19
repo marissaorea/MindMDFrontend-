@@ -1,5 +1,5 @@
 import React from "react";
-import "../ProfileCard.css";
+import "../CSS/ProfileCard.css";
 import Appointment from "../components/Appointments"
 import Chart from "../components/Chart"
 

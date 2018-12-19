@@ -4,7 +4,7 @@ import DoctorSearch from "../containers/DoctorSearch";
 import Map from "../containers/Map";
 import LoadingSpinner from '../components/LoadingContainer'
 import "semantic-ui-css/semantic.min.css";
-import "../DoctorPage.css";
+import "../CSS/DoctorPage.css";
 
 
 class DoctorPage extends React.Component {

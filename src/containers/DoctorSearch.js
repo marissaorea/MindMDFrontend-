@@ -1,5 +1,5 @@
 import React from "react";
-import "../DoctorSearch.css";
+import "../CSS/DoctorSearch.css";
 import InsuranceDropdown from "../components/InsuranceDropdown"
 
 const DoctorSearch = (props) => {

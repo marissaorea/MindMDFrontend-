@@ -1,5 +1,5 @@
 import React from 'react'
-import "../VideoDiv.css"
+import "../CSS/VideoDiv.css"
 
 const VideoDiv = () => {
 

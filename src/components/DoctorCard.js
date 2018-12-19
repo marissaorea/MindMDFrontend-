@@ -1,6 +1,7 @@
 import React from "react";
 import DoctorProfile from "./DoctorProfile";
-import "../DoctorCard.css";
+import "../CSS/DoctorCard.css";
+
 
 
 class DoctorCard extends React.Component {
