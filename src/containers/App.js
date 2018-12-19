@@ -5,6 +5,7 @@ import DoctorPage from '../containers/DoctorPage'
 import NavBar from '../components/NavBar'
 import LandingPageWelcome from '../components/LandingPageWelcome'
 import UserProfile from '../containers/UserProfile'
+import LoginForm from '../components/LoginForm'
 
 class App extends Component {
 
@@ -19,6 +20,7 @@ class App extends Component {
           <Route exact path="/" component={LandingPageWelcome} />
           <Route exact path="/doctors" component={DoctorPage} />
           <Route exact path="/profile" component={UserProfile} />
+          <Route exact path="/login" component={LoginForm} />
         </div>
       </Router>
     );
