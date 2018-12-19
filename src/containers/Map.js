@@ -12,7 +12,7 @@ class Map extends React.Component {
       return(
         <LeafletMap
           center={[40.90866,-73.96559]}
-          zoom={13}
+          zoom={18}
           maxZoom={10}
           attributionControl={true}
           zoomControl={true}

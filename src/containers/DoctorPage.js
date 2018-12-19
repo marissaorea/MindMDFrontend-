@@ -13,7 +13,7 @@ class DoctorPage extends React.Component {
     searchTerm: "",
     clicked: false,
     doctorToDisplayIndex: 0,
-    doctorListCount: 3,
+    doctorListCount: 4,
     insuranceData: [],
     selectedValues: "",
     loading: true
@@ -49,7 +49,7 @@ class DoctorPage extends React.Component {
 
   filterSearchCity() {
     let results = this.state.docData.filter(docInfo => {
-      return docInfo.city.toLowerCase().includes(this.state.searchTerm.toLowerCase());
+      return docInfo.state.toLowerCase().includes(this.state.searchTerm.toLowerCase());
     });
     return results.slice(
       this.state.doctorToDisplayIndex,
@@ -72,13 +72,13 @@ class DoctorPage extends React.Component {
 
   showNext = () => {
     this.setState(currentState => {
-      return { doctorToDisplayIndex: currentState.doctorToDisplayIndex + 3 };
+      return { doctorToDisplayIndex: currentState.doctorToDisplayIndex + 4 };
     });
   };
 
   showBack = () => {
     this.setState(currentState => {
-      return { doctorToDisplayIndex: currentState.doctorToDisplayIndex - 3 };
+      return { doctorToDisplayIndex: currentState.doctorToDisplayIndex - 4 };
     });
   };
 
