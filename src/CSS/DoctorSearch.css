@@ -23,12 +23,6 @@ input {
    background-position: 3px;
    background-repeat: no-repeat;
    padding: 9px 10px 9px 5px;
-   -webkit-transition: width 0.4s ease-in-out;
-   transition: width 0.4s ease-in-out;
    border-color: white;
    margin-left: 2.9em;
-}
-
-input[type=text]:focus {
-  width: 30%;
 }

@@ -9,10 +9,39 @@ import LoginForm from '../components/LoginForm'
 
 class App extends Component {
 
+  state = {
+    jwt: '',
+    currentUser: {}
+  }
 
+  // signIn = (jwt, user) => {
+  //   this.setState({
+  //     jwt: jwt,
+  //     currentUser: user
+  //   }, () => {
+  //     this.fetchUsers(this.state.currentUser)
+  //   })
+  // } //end of sign in function
+
+  // fetchUsers = (currentUser) => {
+  //   console.log(currentUser)
+  //
+  //   fetch(`http://localhost:3000/api/v1/users/${currentUser}`, {
+  //     headers: {
+  //       'Content-Type': 'application/json',
+  //       'Accept': 'application/json',
+  //       'Authorization': `Bearer ${this.state.jwt}`
+  //     },
+  //   })
+  //   .then(response => response.json())
+  //   .then(userObj => {
+  //     debugger
+  //   })
+  // }
 
 
   render() {
+
     return (
       <Router>
         <div className="App">
