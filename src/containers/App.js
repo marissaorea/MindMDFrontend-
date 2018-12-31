@@ -14,14 +14,11 @@ class App extends Component {
     currentUser: {}
   }
 
-  // signIn = (jwt, user) => {
-  //   this.setState({
-  //     jwt: jwt,
-  //     currentUser: user
-  //   }, () => {
-  //     this.fetchUsers(this.state.currentUser)
-  //   })
-  // } //end of sign in function
+  signIn = (user) => {
+    this.setState({
+      currentUser: user
+    })
+  } //end of sign in function
 
   // fetchUsers = (currentUser) => {
   //   console.log(currentUser)
@@ -49,7 +46,7 @@ class App extends Component {
           <Route exact path="/" component={LandingPageWelcome} />
           <Route exact path="/doctors" component={DoctorPage} />
           <Route exact path="/profile" component={UserProfile} />
-          <Route exact path="/login" component={LoginForm} />
+          <Route exact path="/login" component={LoginForm} currentUser={this.state.currentUser} />
         </div>
       </Router>
     );

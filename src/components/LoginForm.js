@@ -4,19 +4,14 @@ import "../CSS/LoginForm.css";
 
 class LoginForm extends React.Component {
   state = {
-    username: "",
+    email: "",
     password: ""
   };
 
-  handleSubmit = event => {
-    this.setState(
-      {
-        [event.target.name]: event.target.value
-      },
-      () => {
-        console.log(this.state);
-      }
-    );
+  handleSubmit = (event) => {
+    this.setState({
+      [event.target.name]: event.target.value
+    });
   }; //end of handleSubmit function
 
   userlogin = event => {
@@ -28,34 +23,36 @@ class LoginForm extends React.Component {
       },
       body: JSON.stringify({
         user: {
-          username: this.state.username,
+          email: this.state.email,
           password: this.state.password
         }
       })
     }).then(response => {
-      debugger;
-    });
+      debugger
+      if(!response) {
+        window.alert("invalid")
+      } else {
+        return response.json()
+      }
+    })
+    .then(jsonObj => {
+      if(jsonObj.user) {
+        window.localStorage.setItem('jwt', jsonObj.jwt)
+        this.props.currentUser(jsonObj.user)
+      }
+    })
   }; //end of user login function
 
   render() {
+    console.log(this.props)
     return (
-      <div className="login-page">
-        <p>Please Login</p>
-        <div class="form">
-          <form class="register-form">
-            <input type="text" placeholder="name" />
-            <input type="password" placeholder="password" />
-            <input type="text" placeholder="email address" />
-            <button>create</button>
-            <p class="message">
-              Already registered? <a href="#">Sign In</a>
-            </p>
-          </form>
-          <form class="login-form">
-            <input type="text" placeholder="username" />
-            <input type="password" placeholder="password" />
-            <button>login</button>
-            <p class="message">
+      <div className="login-page" onSubmit={this.userlogin}>
+        <div className="form">
+          <form className="login-form">
+            <input type="text" placeholder="username" onChange={this.handleSubmit}/>
+            <input type="password" placeholder="password" onChange={this.handleSubmit}/>
+            <input type="submit" value="Sign in" className='loginButtons'/>
+            <p className="message">
               Not registered? <a href="#">Create an account</a>
             </p>
           </form>
