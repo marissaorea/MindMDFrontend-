@@ -55,11 +55,16 @@ class LoginForm extends React.Component {
       return <Redirect to="/" />
     } else {
       return (
-        <form onSubmit={this.handleSubmit}>
+        <div class="login-page">
+        <div class="form">
+        <form class="login-form" onSubmit={this.handleSubmit}>
           <input type="text" placeholder="email" onChange={this.handleEmailInput} value={this.state.email}/>
           <input type="password" placeholder="password" onChange={this.handlePasswordInput} value={this.state.password}/>
-          <input type="submit" value="Submit" onClick={() => console.log("clicking button")} />
+          <input id="submit" type="submit" value="Submit" onClick={() => console.log("clicking button")} />
+          <p class="message">Not registered? <a href="#">Create an account</a></p>
         </form>
+        </div>
+        </div>
       );
     }
   }
