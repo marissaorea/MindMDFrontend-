@@ -1,5 +1,6 @@
 import React from "react";
 import "../CSS/LoginForm.css";
+import { Redirect } from 'react-router-dom'
 
 
 class LoginForm extends React.Component {
@@ -9,17 +10,13 @@ class LoginForm extends React.Component {
   };
 
   handleSubmit = (event) => {
-    this.setState({
-      [event.target.name]: event.target.value
-    });
-  }; //end of handleSubmit function
+    event.preventDefault()
 
-  userlogin = event => {
-    event.preventDefault();
     fetch("http://localhost:3000/api/v1/login", {
       method: "POST",
       headers: {
-        "Content-Type": "application/json"
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
       },
       body: JSON.stringify({
         user: {
@@ -27,38 +24,45 @@ class LoginForm extends React.Component {
           password: this.state.password
         }
       })
-    }).then(response => {
-      debugger
-      if(!response) {
-        window.alert("invalid")
-      } else {
-        return response.json()
-      }
     })
-    .then(jsonObj => {
-      if(jsonObj.user) {
-        window.localStorage.setItem('jwt', jsonObj.jwt)
-        this.props.currentUser(jsonObj.user)
-      }
-    })
-  }; //end of user login function
+      .then((response) => response.json())
+      .then((json) => {
+        localStorage.setItem("jwtToken", json.jwt)
+        console.log(json)
+        this.setState({
+          email: "",
+          password: ""
+        })
+      })
+    }
+
+    handleEmailInput = (event) => {
+      this.setState({
+        email: event.target.value
+      })
+    }
+
+    handlePasswordInput = (event) => {
+      this.setState({
+        password: event.target.value
+      })
+    }
+
 
   render() {
-    console.log(this.props)
-    return (
-      <div className="login-page" onSubmit={this.userlogin}>
-        <div className="form">
-          <form className="login-form">
-            <input type="text" placeholder="username" onChange={this.handleSubmit}/>
-            <input type="password" placeholder="password" onChange={this.handleSubmit}/>
-            <input type="submit" value="Sign in" className='loginButtons'/>
-            <p className="message">
-              Not registered? <a href="#">Create an account</a>
-            </p>
-          </form>
-        </div>
-      </div>
-    );
+    console.log("RENDERING")
+    if(localStorage.getItem('jwtToken')) {
+      return <Redirect to="/profile" />
+    } else {
+      return (
+        <form onSubmit={this.handleSubmit}>
+          <input type="text" placeholder="email" onChange={this.handleEmailInput} value={this.state.email}/>
+          <input type="password" placeholder="password" onChange={this.handlePasswordInput} value={this.state.password}/>
+          <input type="submit" value="Submit" onClick={() => console.log("clicking button")} />
+        </form>
+      );
+    }
   }
+
 }
 export default LoginForm;

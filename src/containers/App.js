@@ -9,36 +9,9 @@ import LoginForm from '../components/LoginForm'
 
 class App extends Component {
 
-  state = {
-    jwt: '',
-    currentUser: {}
-  }
-
-  signIn = (user) => {
-    this.setState({
-      currentUser: user
-    })
-  } //end of sign in function
-
-  // fetchUsers = (currentUser) => {
-  //   console.log(currentUser)
-  //
-  //   fetch(`http://localhost:3000/api/v1/users/${currentUser}`, {
-  //     headers: {
-  //       'Content-Type': 'application/json',
-  //       'Accept': 'application/json',
-  //       'Authorization': `Bearer ${this.state.jwt}`
-  //     },
-  //   })
-  //   .then(response => response.json())
-  //   .then(userObj => {
-  //     debugger
-  //   })
-  // }
 
 
   render() {
-
     return (
       <Router>
         <div className="App">
@@ -46,7 +19,7 @@ class App extends Component {
           <Route exact path="/" component={LandingPageWelcome} />
           <Route exact path="/doctors" component={DoctorPage} />
           <Route exact path="/profile" component={UserProfile} />
-          <Route exact path="/login" component={LoginForm} currentUser={this.state.currentUser} />
+          <Route exact path="/login" component={LoginForm}  />
         </div>
       </Router>
     );
