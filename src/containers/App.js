@@ -7,28 +7,23 @@ import LandingPageWelcome from "../components/LandingPageWelcome";
 import UserProfile from "../containers/UserProfile";
 import LoginForm from "../components/LoginForm";
 import { Redirect } from "react-router-dom"
+import Register from "../components/Register"
+
 
 class App extends Component {
 
   render() {
-    if (localStorage.getItem("jwtToken")) {
-      return(
+    return(
       <div className="App">
-        <NavBar />
           <Route exact path="/" component={LandingPageWelcome} />
           <Route exact path="/doctors" component={DoctorPage} />
           <Route exact path="/profile" component={UserProfile} />
+          <Route exact path="/login" component={LoginForm} />
+          <Route exact path="/register" component={Register} />
       </div>
       )
-    } else {
-      return(
-        <div>
-        <Route exact path="/login" component={LoginForm} />
-        <Redirect to="/login" />
-        </div>
-        )
-      }
-  }
+    }
 }
+
 
 export default App;

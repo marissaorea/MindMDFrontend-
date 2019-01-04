@@ -1,6 +1,9 @@
 import React from "react";
 import "../CSS/LoginForm.css";
 import { Redirect } from 'react-router-dom'
+import { BrowserRouter as Router, Route, NavLink} from "react-router-dom";
+import Register from "./Register"
+
 
 
 class LoginForm extends React.Component {
@@ -53,15 +56,16 @@ class LoginForm extends React.Component {
     console.log("RENDERING")
     if(localStorage.getItem('jwtToken')) {
       return <Redirect to="/" />
-    } else {
-      return (
-        <div class="login-page">
-        <div class="form">
-        <form class="login-form" onSubmit={this.handleSubmit}>
+    }
+     else {
+      return(
+        <div className="login-page">
+        <div className="form">
+        <form className="login-form" onSubmit={this.handleSubmit}>
           <input type="text" placeholder="email" onChange={this.handleEmailInput} value={this.state.email}/>
           <input type="password" placeholder="password" onChange={this.handlePasswordInput} value={this.state.password}/>
-          <input id="submit" type="submit" value="Submit" onClick={() => console.log("clicking button")} />
-          <p class="message">Not registered? <a href="#">Create an account</a></p>
+          <input id="submit" type="submit" value="Submit" />
+          <NavLink className='message' to='/register'><p>Don't have an account yet? Sign up!</p></NavLink>
         </form>
         </div>
         </div>
