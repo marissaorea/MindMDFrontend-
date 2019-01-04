@@ -52,7 +52,7 @@ class LoginForm extends React.Component {
   render() {
     console.log("RENDERING")
     if(localStorage.getItem('jwtToken')) {
-      return <Redirect to="/profile" />
+      return <Redirect to="/" />
     } else {
       return (
         <form onSubmit={this.handleSubmit}>
