@@ -29,9 +29,9 @@ class LoginForm extends React.Component {
       })
     })
       .then((response) => response.json())
-      .then((json) => {
-        localStorage.setItem("jwtToken", json.jwt)
-        console.log(json)
+      .then((user) => {
+        localStorage.setItem("jwtToken", user.jwt)
+        console.log(user)
         this.setState({
           email: "",
           password: ""

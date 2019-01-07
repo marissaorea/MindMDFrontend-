@@ -27,9 +27,9 @@ class Register extends React.Component {
       })
     })
     .then((response) => response.json())
-    .then((json) => {
-      console.log(json)
-      localStorage.setItem("jwtToken", json.jwt)
+    .then((user) => {
+      console.log(user)
+      localStorage.setItem("jwtToken", user.jwt)
       this.setState({
         name: "",
         email: "",

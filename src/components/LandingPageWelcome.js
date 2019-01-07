@@ -10,7 +10,7 @@ import NavBar from "./NavBar"
 const LandingPage = () => {
 //upper most parent for the other components (except doctors page)
 
-  if (localStorage.getItem("jwtToken")) {
+
   return(
     <div className="pusher">
       <NavBar />
@@ -23,14 +23,7 @@ const LandingPage = () => {
         <VideoDiv />
     </div>
   )
-} else {
-  return <Redirect to="/login" />
-
 }
 
 
-
-
-
-}
 export default LandingPage;
