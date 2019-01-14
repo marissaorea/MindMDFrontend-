@@ -3,6 +3,7 @@ import DoctorList from "../containers/DoctorList";
 import DoctorSearch from "../containers/DoctorSearch";
 import Map from "../containers/Map";
 import LoadingSpinner from '../components/LoadingContainer'
+import { Redirect } from "react-router-dom";
 import "semantic-ui-css/semantic.min.css";
 import "../CSS/DoctorPage.css";
 
@@ -84,7 +85,10 @@ class DoctorPage extends React.Component {
 
   render() {
     console.log(this.doctorsInScope())
-
+    
+    if (!localStorage.getItem("jwtToken")) {
+      return <Redirect to="/login" />;
+    } else {
     return (
       <div className="doctor-page-main">
         <div className="ui segment">
@@ -107,7 +111,8 @@ class DoctorPage extends React.Component {
           <button className="ui black button" onClick={this.showNext}>NEXT</button>
         </div>
       </div>
-    );
+      );
+    }
   }
 }
 

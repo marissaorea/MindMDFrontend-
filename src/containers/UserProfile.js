@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ProfileList from '../containers/ProfileList'
+import { Redirect } from "react-router-dom";
 
 class UserProfile extends Component {
 
@@ -17,15 +18,21 @@ class UserProfile extends Component {
       });
   }
 
+  //find user by id and render on the page
+
 
 
   render() {
     console.log(this.state)
+    if (!localStorage.getItem("jwtToken")) {
+      return <Redirect to="/login" />;
+    } else {
     return (
       <div>
         <ProfileList users={this.state.users}/>
       </div>
-    );
+      );
+    }
   }
 }
 

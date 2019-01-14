@@ -15,10 +15,10 @@ class App extends Component {
   render() {
     return(
       <div className="App">
+          <Route exact path="/login" component={LoginForm} />
           <Route exact path="/" component={LandingPageWelcome} />
           <Route exact path="/doctors" component={DoctorPage} />
           <Route exact path="/profile" component={UserProfile} />
-          <Route exact path="/login" component={LoginForm} />
           <Route exact path="/register" component={Register} />
       </div>
       )
