@@ -10,7 +10,7 @@ const Appointment = (props) => {
     <div className="ui cards">
       <div className="card">
         <div className="content">
-          <div className="header">Confirmed Appointment</div>
+          <div className="header">Recent Appointment</div>
           <div className="description">
             <p><b>Date:</b>Saturday, December 6, 2018</p>
             <p><b>Time:</b>12:15PM</p>

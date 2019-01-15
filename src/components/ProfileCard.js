@@ -2,6 +2,7 @@ import React from "react";
 import "../CSS/ProfileCard.css";
 import Appointment from "../components/Appointments"
 import Chart from "../components/Chart"
+import NavBar from "../components/NavBar"
 
 
 const ProfileCard = (props) => {
@@ -18,10 +19,12 @@ const ProfileCard = (props) => {
 }
 
   return(
+    <>
+    <NavBar />
     <div className="main-div">
       Welcome, {props.currentUser.name}!
       <div className="ui card">
-        <img src={props.currentUser.profile_img} className="ui image" />
+        <img src="https://www.pmidpi.com/wp-content/uploads/2015/07/person-placeholder.jpg" className="ui image" />
         <div className="content">
           <div className="header">{props.currentUser.name}</div>
           <div className="description">
@@ -37,6 +40,7 @@ const ProfileCard = (props) => {
         <Chart />
       </div>
     </div>
+    </>
   );
 };
 

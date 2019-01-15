@@ -43,6 +43,7 @@ class DoctorPage extends React.Component {
     return this.state.insuranceData.filter(iD=>iD.company===this.state.selectedValues).map(iD=>iD.doctor)
   }
 
+
   handleChange = event => {
     let searchTerm = event.target.value;
     this.setState({ searchTerm });
@@ -93,6 +94,7 @@ class DoctorPage extends React.Component {
     } else {
     return (
       <div className="doctor-page-main">
+      <NavBar />
         <div className="ui segment">
           <div>
             <DoctorSearch handleChange={this.handleChange} handleDropDown={this.handleDropDown} />
@@ -104,7 +106,7 @@ class DoctorPage extends React.Component {
               {this.state.loading ? <LoadingSpinner /> : <DoctorList docData={this.filterSearchCity()} insuranceData={this.doctorsInScope()} /> }
             </div>
             <div className="six wide column">
-            <Map docData={this.filterSearchCity()}/>
+            <Map docData={this.doctorsInScope()}/>
             </div>
           </div>
         </div>
