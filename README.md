@@ -2,7 +2,7 @@
 
 Mind M.D
 
-#Objective
+## Objective
 
 My motivation behind Mind M.D is to offer users a list of Psychiatrists that they can filter through by specific health insurance and their location. My main inspiration came from ZocDoc except I wanted a product targeted exclusively for users who are seeking pre-emptive mental health care.
 
