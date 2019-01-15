@@ -6,7 +6,6 @@ import {Redirect} from "react-router-dom"
 const NavBar = () => {
 
 
-
   return(
     <div className="nav-bar">
       <NavLink className="home-link" to="/">Home</NavLink>

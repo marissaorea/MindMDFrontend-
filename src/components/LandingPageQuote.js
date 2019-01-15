@@ -5,7 +5,6 @@ import "../CSS/LandingPageQuote.css";
 
 const LandingPageQuote = () => {
 
-
   return(
     <div className="quote-container">
       <div className="quote">
@@ -14,7 +13,6 @@ const LandingPageQuote = () => {
         <p id="quote-text">"A positive attitude gives you power over your circumstances instead of your circumstances having power over you."</p>
         <p id="author"> -Joyce Meyer</p>
       </div>
-
     </div>
   )
 

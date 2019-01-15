@@ -4,13 +4,14 @@ import "../CSS/App.css";
 import DoctorPage from "../containers/DoctorPage";
 import NavBar from "../components/NavBar";
 import LandingPageWelcome from "../components/LandingPageWelcome";
-import UserProfile from "../containers/UserProfile";
+import UserContainer from "../containers/UserContainer";
 import LoginForm from "../components/LoginForm";
 import { Redirect } from "react-router-dom"
 import Register from "../components/Register"
 
-
 class App extends Component {
+
+  
 
   render() {
     return(
@@ -18,7 +19,7 @@ class App extends Component {
           <Route exact path="/login" component={LoginForm} />
           <Route exact path="/" component={LandingPageWelcome} />
           <Route exact path="/doctors" component={DoctorPage} />
-          <Route exact path="/profile" component={UserProfile} />
+          <Route exact path="/profile" component={UserContainer} />
           <Route exact path="/register" component={Register} />
       </div>
       )

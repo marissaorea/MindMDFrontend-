@@ -6,15 +6,17 @@ import Chart from "../components/Chart"
 
 const ProfileCard = (props) => {
 
+  console.log(props.currentUser)
 
-  return (
+  return(
     <div className="main-div">
+      Welcome, {props.currentUser.name}!
       <div className="ui card">
-        <img src="https://semantic-ui.com/images/avatar/large/helen.jpg" className="ui image" />
+        <img src={props.currentUser.profile_img} className="ui image" />
         <div className="content">
-          <div className="header">{props.user.name}</div>
+          <div className="header">{props.currentUser.name}</div>
           <div className="description">
-            Mood Today: Cheerful
+            Email: {props.currentUser.email}
           </div>
         </div>
         <div className="extra content">

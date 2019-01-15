@@ -6,7 +6,7 @@ import LoadingSpinner from '../components/LoadingContainer'
 import { Redirect } from "react-router-dom";
 import "semantic-ui-css/semantic.min.css";
 import "../CSS/DoctorPage.css";
-
+import NavBar from "../components/NavBar"
 
 class DoctorPage extends React.Component {
   state = {
@@ -35,9 +35,9 @@ class DoctorPage extends React.Component {
         .then(insurance => {
           this.setState({
           insuranceData: insurance
-          });
         });
-  }
+      });
+    }
 
   doctorsInScope = () => {
     return this.state.insuranceData.filter(iD=>iD.company===this.state.selectedValues).map(iD=>iD.doctor)
@@ -79,13 +79,15 @@ class DoctorPage extends React.Component {
 
   showBack = () => {
     this.setState(currentState => {
+      debugger
       return { doctorToDisplayIndex: currentState.doctorToDisplayIndex - 3 };
     });
   };
 
+
   render() {
     console.log(this.doctorsInScope())
-    
+
     if (!localStorage.getItem("jwtToken")) {
       return <Redirect to="/login" />;
     } else {
@@ -107,8 +109,8 @@ class DoctorPage extends React.Component {
           </div>
         </div>
         <div className="nav-button">
-          <button className="ui black button" onClick={this.showBack}>BACK</button>
-          <button className="ui black button" onClick={this.showNext}>NEXT</button>
+          <button className="ui black button" onClick={this.showBack}>Back Page</button>
+          <button className="ui black button" onClick={this.showNext}>Next Page</button>
         </div>
       </div>
       );
