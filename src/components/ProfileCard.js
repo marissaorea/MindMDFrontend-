@@ -8,6 +8,15 @@ const ProfileCard = (props) => {
 
   console.log(props.currentUser)
 
+  function currentDate() {
+  var tempDate = new Date();
+  var date = tempDate.getMonth()+1 + '/' + tempDate.getDate() + '/' + tempDate.getFullYear()
+  const currDate = "Date: " + date;
+  return(
+    <p>{currDate}</p>
+  );
+}
+
   return(
     <div className="main-div">
       Welcome, {props.currentUser.name}!
@@ -20,7 +29,7 @@ const ProfileCard = (props) => {
           </div>
         </div>
         <div className="extra content">
-          <div className="meta">Date: Thursday, December 6, 2018</div>
+          <div className="meta">{currentDate()}</div>
         </div>
       </div>
       <div >
