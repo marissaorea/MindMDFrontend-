@@ -16,7 +16,7 @@ Rails, React, Custom CSS, JWT Auth.
 
 To get a development server running clone the project, type npm install and PORT=4000 npm start along with running the backend server which is here: https://github.com/mguevara717/MindMDBackend
 
-##License:
+## License:
 MIT © MarissaOrea
 
-##MindMD FrontEnd
+## MindMD FrontEnd
