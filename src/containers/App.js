@@ -11,7 +11,6 @@ import Register from "../components/Register"
 
 class App extends Component {
 
-  
 
   render() {
     return(

@@ -7,7 +7,7 @@ import NavBar from "../components/NavBar"
 
 const ProfileCard = (props) => {
 
-  console.log(props.currentUser)
+  console.log(props)
 
   function currentDate() {
   var tempDate = new Date();
@@ -20,7 +20,7 @@ const ProfileCard = (props) => {
 
   return(
     <>
-    <NavBar />
+    <NavBar logOut={props.logOut}/>
     <div className="main-div">
       Welcome, {props.currentUser.name}!
       <div className="ui card">

@@ -17,7 +17,8 @@ class DoctorPage extends React.Component {
     doctorListCount: 3,
     insuranceData: [],
     selectedValues: "",
-    loading: true
+    loading: true,
+    isLoggedIn: true
   };
 
   componentDidMount() {
@@ -85,6 +86,12 @@ class DoctorPage extends React.Component {
     });
   };
 
+  logOut = () => {
+      window.localStorage.removeItem("jwtToken")
+      this.setState({
+        isLoggedIn: false
+      })
+  }
 
   render() {
     console.log(this.doctorsInScope())
@@ -94,7 +101,7 @@ class DoctorPage extends React.Component {
     } else {
     return (
       <div className="doctor-page-main">
-      <NavBar />
+      <NavBar logOut={this.logOut}/>
         <div className="ui segment">
           <div>
             <DoctorSearch handleChange={this.handleChange} handleDropDown={this.handleDropDown} />

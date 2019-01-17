@@ -3,10 +3,10 @@ import { NavLink } from 'react-router-dom';
 import "../CSS/NavBar.css";
 import {Redirect} from "react-router-dom"
 
-const NavBar = () => {
+const NavBar = ({logOut}) => {
 
-  // logOut = () => {
-  //   window.localStorage.removeItem('jwt')
+  // logoutUser = () => {
+  //   window.localStorage.removeItem('jwtToken')
   // }
 
   if(localStorage.getItem("jwtToken")) {
@@ -15,6 +15,7 @@ const NavBar = () => {
         <NavLink className="home-link" to="/">Home</NavLink>
         <NavLink className="doctors-link" to="/doctors">Search Doctors</NavLink>
         <NavLink className="profile-link" to="/profile">My Profile</NavLink>
+        <button onClick={logOut} className="logout">Logout</button>
       </div>
       )
     }

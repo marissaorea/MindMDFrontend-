@@ -4,7 +4,8 @@ import ProfileCard from "../components/ProfileCard"
 
 class UserContainer extends Component {
   state = {
-    currentUser: {}
+    currentUser: {},
+    isLoggedIn: false
   };
 
   componentDidMount() {
@@ -25,14 +26,22 @@ class UserContainer extends Component {
   }
 };
 
+logOut = () => {
+    window.localStorage.removeItem("jwtToken")
+    this.setState({
+      isLoggedIn: false
+    })
+}
+
+
   render() {
-    console.log(this.state)
+    console.log(this.logout)
     if (!localStorage.getItem("jwtToken")) {
       return <Redirect to="/login" />;
     } else {
       return(
         <div>
-          <ProfileCard currentUser={this.state.currentUser} />
+          <ProfileCard currentUser={this.state.currentUser}  logOut={this.logOut}/>
         </div>
       );
     }
