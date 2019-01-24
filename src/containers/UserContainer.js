@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
-import ProfileCard from "../components/ProfileCard"
+import ProfileCard from "../components/ProfileCard";
 
 class UserContainer extends Component {
   state = {
@@ -16,32 +16,34 @@ class UserContainer extends Component {
           Authorization: `Bearer ${localStorage.getItem("jwtToken")}`
         }
       })
-      .then(response => response.json())
-      .then(userLogged => {
-        console.log(userLogged)
-        this.setState({
-          currentUser: userLogged.user
-      });
-    });
+        .then(response => response.json())
+        .then(userLogged => {
+          console.log(userLogged);
+          this.setState({
+            currentUser: userLogged.user
+          });
+        });
+    }
   }
-};
 
-logOut = () => {
-    window.localStorage.removeItem("jwtToken")
+  logOut = () => {
+    window.localStorage.removeItem("jwtToken");
     this.setState({
       isLoggedIn: false
-    })
-}
-
+    });
+  };
 
   render() {
-    console.log(this.logout)
+    console.log(this.logout);
     if (!localStorage.getItem("jwtToken")) {
       return <Redirect to="/login" />;
     } else {
-      return(
+      return (
         <div>
-          <ProfileCard currentUser={this.state.currentUser}  logOut={this.logOut}/>
+          <ProfileCard
+            currentUser={this.state.currentUser}
+            logOut={this.logOut}
+          />
         </div>
       );
     }

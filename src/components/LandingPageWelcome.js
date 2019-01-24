@@ -6,6 +6,7 @@ import VideoDiv from "./VideoDiv";
 import { Redirect } from "react-router-dom";
 import NavBar from "./NavBar";
 
+
 class LandingPage extends Component {
   state = {
     isLoggedIn: true
