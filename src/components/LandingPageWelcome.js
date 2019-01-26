@@ -3,8 +3,10 @@ import "../CSS/LandingPageWelcome.css";
 import "semantic-ui-css/semantic.min.css";
 import LandingPageQuote from "./LandingPageQuote";
 import VideoDiv from "./VideoDiv";
+import HowItWorks from "./HowItWorks"
 import { Redirect } from "react-router-dom";
 import NavBar from "./NavBar";
+
 
 
 class LandingPage extends Component {
@@ -33,6 +35,7 @@ class LandingPage extends Component {
           </div>
         </div>
         <LandingPageQuote />
+        <HowItWorks />
         <VideoDiv />
       </div>
     );
