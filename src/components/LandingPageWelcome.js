@@ -37,6 +37,7 @@ class LandingPage extends Component {
         <LandingPageQuote />
         <HowItWorks />
         <VideoDiv />
+          <footer className="footer" >&copy; {new Date().getFullYear()} Copyright: <a href="https://codetomars.com"> Marissa Orea</a></footer>
       </div>
     );
   }

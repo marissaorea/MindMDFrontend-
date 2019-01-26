@@ -5,9 +5,6 @@ import {Redirect} from "react-router-dom"
 
 const NavBar = ({logOut}) => {
 
-  // logoutUser = () => {
-  //   window.localStorage.removeItem('jwtToken')
-  // }
 
   if(localStorage.getItem("jwtToken")) {
     return(

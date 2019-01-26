@@ -29,3 +29,20 @@ h4 {
   margin-top: 0.5em;
   margin-bottom: 0px;
 }
+
+.footer {
+  text-align: center;
+  font-size: 17px;
+  background-color: #231D3A;
+  color: white;
+  padding-top: 2.5em;
+  padding-bottom: 2.5em;
+}
+
+a {
+  color: white;
+}
+
+a:hover {
+  color: #F1584B;
+}
