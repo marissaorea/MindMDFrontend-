@@ -13,7 +13,7 @@ return (
     <div className="howitworks-container">
       <div className="grid">
         <img alt={"stethoscope"} src={"stethoscope.png"} />
-        <h4>Search a list of Doctors</h4>
+        <h4>Find your Psychiatrists</h4>
         <p>Search through our list filter your insurance.</p>
       </div>
       <div className="grid">

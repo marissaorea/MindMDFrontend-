@@ -1,10 +1,10 @@
 .main-gif-containers {
   display: flex;
-  justify-content: space-around;
-  margin-top: 2em;
-  margin-bottom: 2em;
-  margin-left: 13em;
+  justify-content: center;
+  margin: 2em 2em 13em 2em;
   padding: 1em;
+  border: solid 2px green;
+
 }
 
 #stat {
@@ -16,4 +16,5 @@
   margin: 8em;
   display: in-line;
   text-align: center;
+  border: solid 2px black;
 }
