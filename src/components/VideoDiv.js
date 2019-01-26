@@ -7,7 +7,8 @@ const lines = [
   'Marissa',
   'Alyssa',
   'Joseph',
-  'Tahiry'
+  'Tahiry',
+  'You'
 ];
 
 
@@ -18,9 +19,10 @@ const VideoDiv = () => {
       <img src="./iphonegif.gif"/>
       <div className="text-container">
         <h1 id="percent">Personalized for</h1>
-        <ClicketyClack lines={lines} erase repeat />
-        <p id="stat"> Of Americans will experience depression sometime in their lifetime.</p>
-        <p id="stat"> Need a Psychiatrist? Search through this curated list. </p>
+        <ClicketyClack id="typing-effect" lines={lines} erase repeat />
+        <br/>
+        <br/>
+        <p className="description"> Need a Psychiatrist? Mind M.D offers on-demand therapy sessions via text-chat if you can't see a doctor in time.</p>
       </div>
     </div>
   )

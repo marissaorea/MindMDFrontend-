@@ -1,9 +1,14 @@
 .howitworks-container {
-  margin: 10px;
+
   display: flex;
   flex: 1 1 auto;
   text-align: center;
   justify-content: center;
+}
+
+.description {
+  font-size: 18px;
+  font-weight: bold;
 }
 
 #label-highlight {
@@ -11,15 +16,17 @@
   justify-content: center;
   display: flex;
   flex: 1 1 auto;
-  margin-top: 2%;
-  text-decoration-color: #F1584B;
-  text-decoration-style:solid 3px;
-  text-decoration-line: underline;
+  margin-top: 3%;
+  color: #F1584B;
+  font-weight: bold;
+  font-size: 1.8em;
 }
 
 .grid {
-  margin-top: 2%;
-  margin-bottom: 4%;
+  margin-top: 1%;
+  margin-bottom: 2%;
   width: 32%;
   padding: 3% 3% 3% 3%;
+  font-size: 18px;
+
 }
