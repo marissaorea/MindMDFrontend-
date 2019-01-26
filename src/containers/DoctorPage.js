@@ -1,12 +1,12 @@
 import React from "react";
 import DoctorList from "../containers/DoctorList";
-import DoctorSearch from "../containers/DoctorSearch";
 import Map from "../containers/Map";
 import LoadingSpinner from '../components/LoadingContainer'
 import { Redirect } from "react-router-dom";
 import "semantic-ui-css/semantic.min.css";
 import "../CSS/DoctorPage.css";
 import NavBar from "../components/NavBar"
+import InsuranceDropdown from "../components/InsuranceDropdown"
 
 class DoctorPage extends React.Component {
   state = {
@@ -93,35 +93,26 @@ class DoctorPage extends React.Component {
       })
   }
 
+  // <NavBar logOut={this.logOut}/>
   render() {
     console.log(this.doctorsInScope())
-
     if (!localStorage.getItem("jwtToken")) {
       return <Redirect to="/login" />;
-    } else {
-    return (
+    }else {
+    return(
       <div className="doctor-page-main">
-      <NavBar logOut={this.logOut}/>
-        <div className="ui segment">
-          <div>
-            <DoctorSearch handleChange={this.handleChange} handleDropDown={this.handleDropDown} />
-          </div>
-        </div>
-        <div>
-          <div className=" ui grid">
-            <div className="ten wide column">
+        <NavBar logOut={this.logOut}/>
+            <div className="dropdown-container">
+              <InsuranceDropdown handleChange={this.handleChange} handleDropDown={this.handleDropDown} />
+            </div>
+            <div className="doctor-list">
               {this.state.loading ? <LoadingSpinner /> : <DoctorList docData={this.filterSearchCity()} insuranceData={this.doctorsInScope()} /> }
             </div>
-            <div className="six wide column">
-            <Map docData={this.doctorsInScope()}/>
-            </div>
-          </div>
-        </div>
         <div className="nav-button">
           <button className="ui black button" onClick={this.showBack}>Back Page</button>
           <button className="ui black button" onClick={this.showNext}>Next Page</button>
+          </div>
         </div>
-      </div>
       );
     }
   }

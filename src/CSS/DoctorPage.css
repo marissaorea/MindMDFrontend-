@@ -1,4 +1,15 @@
+
 .nav-button {
   margin-left: 45em;
   margin-bottom: 3em;
+}
+
+.doctor-page-main {
+  background-color: #F0F0F0;
+}
+
+.doctor-list {
+  background-color: white;
+  padding: 2em;
+  margin: 3px 6em 3em 6em;
 }
