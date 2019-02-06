@@ -11,11 +11,6 @@ class DoctorList extends React.Component {
         {this.props.docData.map(doctorInfo => (
           <DoctorCard key={doctorInfo.id} doctorInfo={doctorInfo} renderMore={this.showNext} />
         ))}
-        <div>
-        {this.props.insuranceData.map(doctorInfo => (
-          <DoctorCard key={doctorInfo.id} doctorInfo={doctorInfo} renderMore={this.showNext} />
-        ))}
-        </div>
       </div>
     );
   }

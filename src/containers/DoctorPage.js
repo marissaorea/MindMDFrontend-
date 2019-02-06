@@ -5,8 +5,9 @@ import LoadingSpinner from '../components/LoadingContainer'
 import { Redirect } from "react-router-dom";
 import "semantic-ui-css/semantic.min.css";
 import "../CSS/DoctorPage.css";
-import NavBar from "../components/NavBar"
-import InsuranceDropdown from "../components/InsuranceDropdown"
+import NavBar from "../components/NavBar";
+import Dropdown from "../containers/Dropdown";
+
 
 class DoctorPage extends React.Component {
   state = {
@@ -18,7 +19,8 @@ class DoctorPage extends React.Component {
     insuranceData: [],
     selectedValues: "",
     loading: true,
-    isLoggedIn: true
+    isLoggedIn: true,
+    selectedOption: null
   };
 
   componentDidMount() {
@@ -35,20 +37,20 @@ class DoctorPage extends React.Component {
         .then(response => response.json())
         .then(insurance => {
           this.setState({
-          insuranceData: insurance
-        });
+            insuranceData: insurance
+          })
       });
-    }
+    } //end of componentDidMount
 
   doctorsInScope = () => {
     return this.state.insuranceData.filter(iD=>iD.company===this.state.selectedValues).map(iD=>iD.doctor)
   }
 
+  handleChange = (selectedOption) => {
+     this.setState({ selectedOption });
+     console.log(`Option selected:`, selectedOption);
+   }
 
-  handleChange = event => {
-    let searchTerm = event.target.value;
-    this.setState({ searchTerm });
-  };
 
   filterSearchCity() {
     let results = this.state.docData.filter(docInfo => {
@@ -95,7 +97,6 @@ class DoctorPage extends React.Component {
 
   // <NavBar logOut={this.logOut}/>
   render() {
-    console.log(this.doctorsInScope())
     if (!localStorage.getItem("jwtToken")) {
       return <Redirect to="/login" />;
     }else {
@@ -103,7 +104,7 @@ class DoctorPage extends React.Component {
       <div className="doctor-page-main">
         <NavBar logOut={this.logOut}/>
             <div className="dropdown-container">
-              <InsuranceDropdown handleChange={this.handleChange} handleDropDown={this.handleDropDown} />
+              <Dropdown insuranceData={this.state.insuranceData} />
             </div>
             <div className="doctor-list">
               {this.state.loading ? <LoadingSpinner /> : <DoctorList docData={this.filterSearchCity()} insuranceData={this.doctorsInScope()} /> }
