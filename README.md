@@ -1,6 +1,5 @@
-# Project Title
+## MindMD
 
-Mind M.D
 
 ## Objective
 
@@ -19,4 +18,4 @@ To get a development server running clone the project, type npm install and PORT
 ## License:
 MIT © MarissaOrea
 
-## MindMD FrontEnd
+
